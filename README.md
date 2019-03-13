@@ -94,10 +94,12 @@
 - WYSIWYG should not allow the user to create functionality inside the Editor such as dropdown menus or effects.
 - For each allowed option on the Drupal text Filter WYSIWYG should provide the relative button. Eg if the user is able to add a `<blockquote>` she should see a button on the Editor to add a blockquote.
 - Custom Ckeditor templates should be created (using JS) on a custom module.
-- Be careful with the CKEditor `inline-images`. Normally you should not allow users to add images on CKEditor but use a specific image field to do so.
 - For accessibility valid code there should be forced elements on CKEditor (eg required alt attribute for images).
 - WYSIWYG should provide basic information about using the Editor as also as a more analytic page for Admins.
 - Too many options on the WYSIWYG may cause problems. Protect the user from "breaking" the site design/code etc.
+- If you allow the "image" button for CKEditor you normally need to install an image browser like [imce](https://www.drupal.org/project/imce).
+- Be careful with the CKEditor `inline-images`. Normally you should not allow users to add images on CKEditor but use a specific image field to do so.
+- If you allow the "link" button for CKEditor you normally need to install additional modules such as [linkit](https://www.drupal.org/project/linkit), [editor_advanced_link](https://www.drupal.org/project/editor_advanced_link), [pathologic](https://www.drupal.org/project/pathologic) etc.
 
 #### 2.9 Users, roles & permissions
 - Use an "Administrator" role only when you need to add more than 1 Administrators.
