@@ -134,6 +134,7 @@
 - Support IE11 and above browsers and follow the [Drupal project browser support](https://www.drupal.org/docs/8/system-requirements/browser-requirements). We are not styling with that in mind but will deal with it when finished.
 - Override only the necessary CSS coming from each module. Do not copy and paste all the CSS of a module to the project Theme.
 - Be careful when overriding CSS/JS as also as html structure especially if it is coming from Core. This may break core built-in functionality.
+- For large scale projects investigate using a "utility-first/functional" CSS framework like [tailwind](https://tailwindcss.com), [tachyons](http://tachyons.io) etc.
 - For the Admin pages use the default Core admin theme (Seven) and simply attach your CSS/JS files to add some functionality. This will happen on a custom module or a subtheme.
 - If you want to override a twig template get only from the source module that provides that. Eg if you want to override the `html.html.twig` file copy that from the system module.
 - Under the Theme folder create new subfolders to group files only if there is a significant amount of them and it makes sense to separate theme. Eg split the twig files to templates/system, templates/block etc using the pattern templates/[module] if there are 3 files of the system and 2 files of the block module.
