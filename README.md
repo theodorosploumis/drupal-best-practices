@@ -149,7 +149,7 @@
 - Avoid theming with elements except from the basic ones (p, h1 etc). Use CSS classes instead.
 - If you need to use a CSS framework try to pick up only the required parts of the framework and not the whole framework.
 - Always comment @mixins, @function.
-- Always split large scss files if they contain too many lines. Split them by usage (eg the variables related to color, the variables related to typography etc).
+- Always split large scss files if they contain too many lines. Split them by usage (eg the variables related to color, the variables related to typography etc). For Drupal especially, we can group scss files by entity (eg "block/\*", "node/\*", "taxonomy/\*" etc).
 - Useful plugins to use for theme development are [autoprefixer](https://autoprefixer.github.io), [breakpoint-sass](http://breakpoint-sass.com), [ModularScale](https://www.modularscale.com), [browsersync](https://browsersync.io), [sass sourcemaps](http://thesassway.com/intermediate/using-source-maps-with-sass).
 
 ---
