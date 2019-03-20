@@ -101,7 +101,13 @@
 - Be careful with the CKEditor `inline-images`. Normally you should not allow users to add images on CKEditor but use a specific image field to do so.
 - If you allow the "link" button for CKEditor you normally need to install additional modules such as [linkit](https://www.drupal.org/project/linkit), [editor_advanced_link](https://www.drupal.org/project/editor_advanced_link), [pathologic](https://www.drupal.org/project/pathologic) etc.
 
-#### 2.9 Users, roles & permissions
+#### 2.9 Menus & navigation
+- If using a pathauto pattern for path aliases consider using structured paths where each parent has a page.
+- Avoid using non English characters for path aliases.
+- For placeholder paths (that go nowhere) use the `<nolink>` as path value.
+- Menus should always be menus. Non menu blocks used as menus have accessibility issues and missing valuable details for the browser (eg the `is-active` class).
+
+#### 2.10 Users, roles & permissions
 - Use an "Administrator" role only when you need to add more than 1 Administrators.
 - Split roles by Persona (not by functionality).
 - Do not allow authors access pages and options that they have nothing to do (hide empty admin pages).
