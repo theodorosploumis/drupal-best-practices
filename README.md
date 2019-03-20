@@ -210,6 +210,7 @@
 - Test by entity submission form.
 - Test all the fields of the bundle (machine_name, no reused, non empty description, field type validation, labels, UI values).
 - Test the access permissions per user Role (IMPORTANT).
+- Investigate using a predefined, automated testing tool like [acquia/drupal-spec-tool](https://github.com/acquia/drupal-spec-tool).
 
 #### 4.8 Third party libraries
 - Before adding an external library/dependency check if it is already available [on Core](http://cgit.drupalcode.org/drupal/tree/core/core.libraries.yml).
@@ -246,6 +247,7 @@
 
 #### 6.1 Tools
 - [DrupalTools](https://drupaltools.github.io)
+- [acquia/drupal-spec-tool](https://github.com/acquia/drupal-spec-tool)
 
 #### 6.2 Drupal reporting modules
 - [field_report (8.x)](https://www.drupal.org/project/field_report)
