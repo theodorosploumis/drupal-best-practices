@@ -176,7 +176,8 @@
 - Prefer using the [Feature branch workflow](https://www.atlassian.com/git/tutorials/comparing-workflows/feature-branch-workflow) with 1 only master branch, feature specific branches (for tasks and development), pull requests fro feature branches and git tags for live environment and so on.
 
 #### 4.4 Drupal scaffolding
-- Use [Drupal scaffold](https://github.com/drupal-composer/drupal-scaffold) for Drupal initial build except if the hosting provider proposes a different method. Avoid using the [Drupal core composer.json](http://cgit.drupalcode.org/drupal/tree/composer.json) file.
+- Avoid using the [Drupal core composer.json](http://cgit.drupalcode.org/drupal/tree/composer.json) file as the main composer.json file. You may have conflicts when updating drupal core.
+- Use [Drupal scaffold](https://github.com/drupal-composer/drupal-scaffold) for Drupal initial build except if the hosting provider proposes a different method (eg a redy to use composer.json file).
 - Use only 1 custom `settings.php` that includes environment specific additional settings files. Track the settings.php file on git but not the additional settings files.
 - Try to keep important Drupal settings on the settings.php additional files (eg enabled development modules, caching options, php ini settings etc) and not on the database.
 - Settings.php and additional files should work on a CI system and they should be "platform agnostic".
