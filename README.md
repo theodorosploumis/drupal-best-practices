@@ -271,6 +271,7 @@
 - [Drupal Site building best practices](https://gist.github.com/Greg-Boggs/8a2661b70c4e293db585)
 - [Drupal 8 Theming best practices](http://www.gregboggs.com/drupal-8-theming-best-practices)
 - [Drupal Theming and Site Building: 6 Best Practices](https://evolvingweb.ca/blog/drupal-theming-and-site-building-6-best-practices)
+- [The best way to manage your Drupal 8.x workflow](https://medium.freecodecamp.org/the-best-way-to-manage-your-drupal-workflow-ade9525a84c0)
 - [Development best practices learned from the Drupal Dev Days Seville 2017](https://colorfield.be/blog/development-best-practices-learned-drupal-dev-days-seville-2017)
 - [Acquia Prelaunch checklist for Drupal sites](https://support.acquia.com/hc/en-us/articles/360005372114-Prelaunch-checklist-for-Drupal-sites)
 - [Google will Never Tell you About These Best Drupal Practices](https://opensenselabs.com/blog/articles/google-will-never-tell-you-about-these-best-drupal-practices)
