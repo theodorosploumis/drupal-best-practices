@@ -254,9 +254,10 @@
 - [field_report (8.x)](https://www.drupal.org/project/field_report)
 - [content_report (7.x)](https://www.drupal.org/project/content_report)
 - [prod_check (7.x, 8.x)](https://www.drupal.org/project/prod_check)
-- [site_audit (7.x, 8.x)](https://www.drupal.org/project/site_audit)
+- [site_audit (drush plugin 7.x, 8.x)](https://www.drupal.org/project/site_audit)
 - [quant (7.x)](https://www.drupal.org/project/quant)
 - [mysqlreport (7.x)](https://www.drupal.org/project/mysqlreport)
+- [unused_modules (7.x, 8.x)](https://www.drupal.org/project/unused_modules)
 
 #### 6.3 Articles & Guides
 - [Drupal development standards](https://www.drupal.org/docs/develop)
