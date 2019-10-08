@@ -111,7 +111,7 @@
 - Use an "Administrator" role only when you need to add more than 1 Administrators.
 - Split roles by Persona (not by functionality).
 - Do not allow authors access pages and options that they have nothing to do (hide empty admin pages).
-- Don't allow multiple real persons to share the same Drupal Account. Conmsider creating 1 account per person.
+- Don't allow multiple real persons to share the same Drupal Account. Consider creating 1 account per person.
 - Give short one word machine names to user Roles (eg prefer sitemanager instead of site_manager).
 - Do not add any permissions for the core user role "Authenticated User" (authenticated) except if there are no other member roles.
 - Short roles by permissions quantity. For example Anonymous shoulld be on top and Administrators should be below any other roles.
