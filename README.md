@@ -177,13 +177,13 @@
 
 #### 4.4 Drupal scaffolding
 - Avoid using the [Drupal core composer.json](http://cgit.drupalcode.org/drupal/tree/composer.json) file as the main composer.json file. You may have conflicts when updating drupal core.
-- Use [Drupal scaffold](https://github.com/drupal-composer/drupal-scaffold) for Drupal initial build except if the hosting provider proposes a different method (eg a redy to use composer.json file).
+- Use the official [drupal/recommended-project](https://github.com/drupal/recommended-project) for Drupal initial build except if the hosting provider proposes a different method (eg a redy to use composer.json file).
 - Use only 1 custom `settings.php` that includes environment specific additional settings files. Track the settings.php file on git but not the additional settings files.
 - Try to keep important Drupal settings on the settings.php additional files (eg enabled development modules, caching options, php ini settings etc) and not on the database.
 - Settings.php and additional files should work on a CI system and they should be "platform agnostic".
 - Use composer for dependencies and track only composer.json and composer.lock files on git.
 - Try to not track composer downloaded files on git (eg module/contrib, themes/contrib, core, vendor folders etc). Track them only if you have no options to run `composer install` on the online servers.
-- Prefer using a specific version for all packages and especially for Drupal core (eg `"drupal/core": "8.6.10"` instead of `"drupal/core": "^8.6"`)
+- Prefer using a specific version for all packages and especially for Drupal core (eg `"drupal/core": "8.8.10"` instead of `"drupal/core": "^8.8"`)
 - Patches should be added with composer using [cweagans/composer-patches](https://github.com/cweagans/composer-patches).
 - Keep the `config` folder out of the web files folder but track it on git.
 - Keep the `vendor` folder out of the web files folder.
