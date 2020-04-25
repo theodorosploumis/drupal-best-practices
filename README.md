@@ -130,7 +130,7 @@
 - Avoid using modules **panels, panelizer, panels_everywhere** and of this family.
 - Use preprocess functions on `.theme` file to add custom html classes or other attributes, twig variables etc.
 - Don't forget to create templates for special pages (404, 403, maintenance, login page etc).
-- For large projects with many templates investigate using modules [components](https://www.drupal.org/project/components), [ui_patterns](https://www.drupal.org/project/ui_patterns) and family, [pattern_library](https://www.drupal.org/project/pattern_library) as also as [Patternlab library](https://drupal-pattern-lab.github.io).
+- For large projects with many templates investigate using modules [components](https://www.drupal.org/project/components), [ui_patterns](https://www.drupal.org/project/ui_patterns) and family, [storybook](https://storybook.js.org/), [pattern_library](https://www.drupal.org/project/pattern_library) as also as [Patternlab library](https://drupal-pattern-lab.github.io).
 - Try to use only core theme ([Classy](http://cgit.drupalcode.org/drupal/tree/core/themes/classy)) as base theme.
 - If you want to use a contrib base theme (eg bootstrap, omega etc) it is better to clone and override it and use no base theme.
 - It is a good practice to have a project styleguide.
@@ -147,6 +147,7 @@
 - Avoid using the path alias (eg related classes) of a webpage to style the page. Path aliases are considered unstable and could change frequently.
 - Do not use non semantic CSS classes. Saying that we should not use classes such as "clearfix, container, full-width" etc if these classes are used to provide some CSS styling. Instead use SASS mixins such as `@full-width {width: 100%}`.
 - Avoid theming with elements except from the basic ones (p, h1 etc). Use CSS classes instead.
+- Use special prefixes for css classes that are depended to their functionality or usage (eg `twig-` for twig manual classes, `js-` for classes that trigger a js action etc).
 - If you need to use a CSS framework try to pick up only the required parts of the framework and not the whole framework.
 - Always comment @mixins, @function.
 - Always split large scss files if they contain too many lines. Split them by usage (eg the variables related to color, the variables related to typography etc). For Drupal especially, we can group scss files by entity (eg "block/\*", "node/\*", "taxonomy/\*" etc).
