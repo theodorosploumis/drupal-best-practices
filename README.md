@@ -60,6 +60,7 @@
 - All fields require a Description to inform the user about their need.
 - Image fields file directory should not use the default structure `[date:custom:Y]-[date:custom:m]` but a custom one meaningful name (eg `banners`). Unify image fields of the same type under the same folders.
 - Remove `gif` from allowed file extensions for image fields except if there are special requirements.
+- Consider using a fixed number of letters for the prefixes everywhere eg in a 3 letter prefix pattern there whould be `field_srd_` for shared fields, `field_art_` for Article node type only fields etc.
 
 #### 2.6 (Drupal) Views
 - Views should follow this pattern for the machine name: [machinename]. That means you should use only letters and no special character or space.
