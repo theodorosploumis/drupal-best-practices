@@ -227,14 +227,15 @@
 - [stage_file_proxy](https://www.drupal.org/project/stage_file_proxy)
 - [devel](https://www.drupal.org/project/devel)
 - [masquerade](https://www.drupal.org/project/masquerade)
+- [reroute_email](https://www.drupal.org/project/reroute_email)
 - [structure_sync](https://www.drupal.org/project/structure_sync)
 - [config_split](https://www.drupal.org/project/config_split)
 - [config_installer](https://www.drupal.org/project/config_installer)
 - [backup_migrate](https://www.drupal.org/project/backup_migrate)
 
 #### 4.10 Modules to avoid on live environments
-- dblog
-- [Acquia - Module incompatibilities](https://docs.acquia.com/acquia-cloud/develop/drupal/module-incompatibilities)
+- dblog (use monolog or syslog instead)
+- See also [Acquia - Module incompatibilities](https://docs.acquia.com/acquia-cloud/develop/drupal/module-incompatibilities)
 
 ---
 
