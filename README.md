@@ -228,6 +228,7 @@
 - [devel](https://www.drupal.org/project/devel)
 - [masquerade](https://www.drupal.org/project/masquerade)
 - [reroute_email](https://www.drupal.org/project/reroute_email)
+- [simplei](https://www.drupal.org/project/simplei)
 - [structure_sync](https://www.drupal.org/project/structure_sync)
 - [config_split](https://www.drupal.org/project/config_split)
 - [config_installer](https://www.drupal.org/project/config_installer)
