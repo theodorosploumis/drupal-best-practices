@@ -1,4 +1,4 @@
-# Drupal (8.x) Best Practices
+# Drupal (8.x +) Best Practices
 
 > This is a short, opinion based, **short list** with common best practices for developing a Drupal (8.x) website.
 
