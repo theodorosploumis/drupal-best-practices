@@ -32,6 +32,7 @@
 - Machine names of Content types and fields should disallow name conflicts (eg nameone and nameoneplus may cause issues).
 - Content types should follow this pattern for the machine name: [machinename]. That means you should use only letters and no special character or space.
 - Avoid very generic machine names or names that have been used already on the site even for another type of functionality (Views, Content types, Blocks, Plugins etc).
+- All Content types should have a Description to inform the user or developer about their need.
 
 #### 2.2 Blocks
 - Custom Blocks should follow this pattern for the machine name: [machinename]. That means you should use only letters and no special character or space.
@@ -57,7 +58,7 @@
 - Fields machine name should follow this pattern for the machine name:  `field_[content_type_machine_name]_[short_name]`.
 - Re-use fields (shared fields) only when you need to create a reference using this field or the field does not change at all between the shared entities (eg field created).
 - Reusable fields can have a more generic machine name pattern (eg field_shared_created or field_common_created etc).
-- All fields require a Description to inform the user about their need.
+- All fields should have a Description to inform the user or developer about their need.
 - Image fields file directory should not use the default structure `[date:custom:Y]-[date:custom:m]` but a custom one meaningful name (eg `banners`). Unify image fields of the same type under the same folders.
 - Remove `gif` from allowed file extensions for image fields except if there are special requirements.
 - Consider using a fixed number of letters for the prefixes everywhere eg in a 3 letter prefix pattern there whould be `field_srd_` for shared fields, `field_art_` for Article node type only fields etc.
