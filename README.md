@@ -2,6 +2,11 @@
 
 > This is a short, opinion based, **short list** with common best practices for developing a Drupal (8.x) website.
 
+### Preface
+
+- If you need to create a **Report** for a Drupal project please head to https://github.com/theodorosploumis/drupal-report.
+- If you need a **example checkbox list** for a "Drupal best practices" setup please check https://github.com/theodorosploumis/drupal-report/blob/master/example-report.md.
+
 ### 1. Parameters to consider
 - **Technical specification document**.
 - A **brief of the project scope**.
