@@ -275,7 +275,6 @@
 - [Building a collaborative Drupal 8.x distribution](http://dropdog.readthedocs.io/)
 - [7.x site building best practices](https://www.drupal.org/docs/7/site-building-best-practices)
 - [Checklist for launching a site](https://www.drupal.org/node/1076460)
-- [Best practices to organise Drupal 7.x projects](https://www.drupalorganised.com/content)
 - [Drupal 8 Best Practices 2016](https://github.com/WondrousLLC/drupal-8-best-practices)
 - [Drupal 8 Composer Best Practices](https://www.lullabot.com/articles/drupal-8-composer-best-practices)
 - [Drupal 8 Site building best practices](http://www.gregboggs.com/drupal8-site-building-best-practices)
@@ -290,6 +289,7 @@
 - [Drupal Quality Initiative (DQI) - Drupal 8 Best Practices](https://docs.google.com/document/d/1li4q07BfewNSSPYlHnolzJ-6hICHl-WPRPSVDfTg4Zo/edit)
 
 #### 6.4 Similar projects
+- [Best practices to organise Drupal 7.x projects](https://github.com/drevops/drupal-organised)
 - [dropdog.readthedocs.io](https://dropdog.readthedocs.io)
 - [github.com/wearewondrous/drupal-8-best-practices](https://github.com/wearewondrous/drupal-8-best-practices)
 - [Gist: Drupal Site Building Best Practices](https://gist.github.com/Greg-Boggs/8a2661b70c4e293db585)
