@@ -140,6 +140,7 @@
 - For large projects with many templates investigate using modules [components](https://www.drupal.org/project/components), [ui_patterns](https://www.drupal.org/project/ui_patterns) and family, [storybook](https://storybook.js.org/), [pattern_library](https://www.drupal.org/project/pattern_library) as also as [Patternlab library](https://drupal-pattern-lab.github.io).
 - Try to use only core theme ([Classy](http://cgit.drupalcode.org/drupal/tree/core/themes/classy)) as base theme.
 - If you want to use a contrib base theme (eg bootstrap, omega etc) it is better to clone and override it and use no base theme.
+- Try not to create machine names for theming Display and Form modes that are tied to a specific field of the mode (eg avoid machine names like `display_landscape_image`). Try to use machine names that are field agnostic.
 - It is a good practice to have a project styleguide.
 - For complicated content structure requirements investigate using module [paragraphs](https://www.drupal.org/project/paragraphs).
 - Consider using the most common breakpoints for responsive design and use the same breakpoints for Drupal breakpoints also (340px, 768px, 1024px, 1600px).
@@ -298,4 +299,4 @@
 ---
 
 ### License
-[MIT](LICENSE)
+[MIT](LICENSE) 2018 - 2021
