@@ -131,7 +131,7 @@
 ---
 
 ### 3. Theming, templates
-- Follow the [Atomic design](http://patternlab.io/about.html) philosophy for the CSS as also as for the design and html.
+- Follow the [Atomic design](https://patternlab.io/) philosophy for the CSS as also as for the design and html.
 - For multiple themers team or large projects prefer working with **twig templates** only (eg adding html classe for each view mode) so no theme settings exist on database.
 - For 1 themer team you can use the field UI to move fields around (so theming exists on database).
 - Avoid using modules **panels, panelizer, panels_everywhere** and of this family.
@@ -198,7 +198,7 @@
 - Keep the `vendor` folder out of the web files folder.
 - Scaffolding code should exist on the project root (eg ansible, bash, dockerfile etc) either to create the environment on a CI or a VM.
 - Use [Drupal Features](https://www.drupal.org/project/features) to organize your config into modules only when you need to export this to reusable modules.
-- Use `drush config-import/config-export` (or additional drush options like `drush csex/csim`) to manage config.
+- Use `drush config-import/config-export` (or additional drush options like `drush cex/cim`) to manage config.
 - Less modules is better.
 - Try to use only core modules and add contributed modules only if required.
 
