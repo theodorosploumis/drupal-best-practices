@@ -288,6 +288,7 @@
 - [Google will Never Tell you About These Best Drupal Practices](https://opensenselabs.com/blog/articles/google-will-never-tell-you-about-these-best-drupal-practices)
 - [Video: Best Practice Site Architecture in Drupal 8, 2017](https://www.youtube.com/watch?v=4GLkujT3xFU)
 - [Drupal Quality Initiative (DQI) - Drupal 8 Best Practices](https://docs.google.com/document/d/1li4q07BfewNSSPYlHnolzJ-6hICHl-WPRPSVDfTg4Zo/edit)
+- [Standards for documenting Drupal site architecture, 2015](https://groups.drupal.org/node/470583)
 
 #### 6.4 Similar projects
 - [Best practices to organise Drupal 7.x projects](https://github.com/drevops/drupal-organised)
@@ -299,4 +300,4 @@
 ---
 
 ### License
-[MIT](LICENSE) 2018 - 2021
+[MIT](LICENSE) 2018 - 2022
