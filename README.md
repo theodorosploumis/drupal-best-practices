@@ -42,6 +42,7 @@
 #### 2.2 Blocks
 - Custom Blocks should follow this pattern for the machine name: [machinename]. That means you should use only letters and no special character or space.
 - Create custom Block Types using code.
+- For "static" like Blocks (eg with static html content that have only 1 instance) create Block Plugins through code. Avoid adding Blocks uging fixed "uuids" through a hook_install() or hook_update_N() function. Blocks with uuids are considered content and thus you may have problems with config sync, translations etc. See an example of a simple Block plugin on [ExampleUppercaseBlock.php](https://git.drupalcode.org/project/examples/-/blob/3.x/modules/block_example/src/Plugin/Block/ExampleUppercaseBlock.php)
 - Treat machine_name, fields, view modes etc like any other Content type (see above).
 - On the machine_name do not add the block prefix (Drupal will add this anyway before the machine_name).
 - On the machine_name add a basic, generic name that will describe the block functionality. Eg banner, list,  header etc.
