@@ -132,6 +132,8 @@
 ---
 
 ### 3. Theming, templates
+- Use **only one word for your theme machine name**. This is to reduce complexity and improve readability on theme hooks, template suggestions etc.
+- When using a non-core base theme try to **not add the base theme machine name on the subtheme**. For example if the base theme is "bootstrap" do not create a subtheme with machine name "something_bootstrap". This is because we would not like to mess with the machine name of the base theme when renaiming theme libraries, hook functions etc. It is better to keep the new subtheme machine name totally independent.
 - Follow the [Atomic design](https://patternlab.io/) philosophy for the CSS as also as for the design and html.
 - For multiple themers team or large projects prefer working with **twig templates** only (eg adding html classe for each view mode) so no theme settings exist on database.
 - For 1 themer team you can use the field UI to move fields around (so theming exists on database).
