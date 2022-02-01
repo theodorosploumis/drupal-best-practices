@@ -182,7 +182,7 @@
 - If you plan for long term support and there will be ongoing changes for the project consider creating a custom [Drupal distribution](https://www.drupal.org/docs/8/distributions).
 - When creating a Drupal distribution use an 1 word machine name without underscores (eg prefer "myproject" instead of "my_project").
 - All custom specific modules MUST be prefixed with `projectmachinename_`.
-- Use [drupal console](https://drupalconsole.com) to generate code (modules, plugins etc).
+- Use [drupal console](https://drupalconsole.com) or [drush](https://github.com/drush-ops/drush) to generate code (modules, plugins etc).
 
 #### 4.3 VCS - git
 - Use a git online UI (GitHub, Gitlab, Bitbucket etc). On the same system add your issues, documentation and [CI](http://cgit.drupalcode.org/drupal/tree/core/drupalci.yml) automation workflows.
@@ -193,6 +193,7 @@
 - Use the official [drupal/recommended-project](https://github.com/drupal/recommended-project) for Drupal initial build except if the hosting provider proposes a different method (eg a ready to use composer.json file).
 - Use only 1 custom `settings.php` that includes environment specific additional settings files. Track the settings.php file on git but not the additional settings files.
 - Try to keep important Drupal settings on the settings.php additional files (eg enabled development modules, caching options, php ini settings etc) and not on the database.
+- Never add critical credentials, passwords etc from setttings.php files or inside config yml files that are truck by the vcs! Prefer using `.env` files for such settings.
 - Settings.php and additional files should work on a CI system and they should be "platform agnostic".
 - Use composer for dependencies and track only composer.json and composer.lock files on git.
 - Try to not track composer downloaded files on git (eg module/contrib, themes/contrib, core, vendor folders etc). Track them only if you have no options to run `composer install` on the online servers.
@@ -228,6 +229,7 @@
 
 #### 4.8 Third party libraries
 - Before adding an external library/dependency check if it is already available [on Core](http://cgit.drupalcode.org/drupal/tree/core/core.libraries.yml).
+- Many well known `dev` related PHP packages are already included on [drupal/core-dev](https://packagist.org/packages/drupal/core-dev) so you may require only this package instead of several others.
 - Prefer tiny and specific libraries.
 - Check the library popularity on its official repository. Avoid libraries with no traffic at all.
 - If multiple release sources (eg packagist, apt-get etc) are available for the library prefer GitHub which is most of the times the development source.
