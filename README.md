@@ -127,6 +127,7 @@
 - If there is separate functionality on a custom module create all the necessary permissions (eg permission to "Access the display" and to "Administer the module" etc).
 - All the permissions titles and descriptions should start with a common used verb such as: "View …", "Administer …", "Delete …" etc.
 - Use module [masquerade](https://www.drupal.org/project/masquerade) to test other members permissions.
+- Consider using module [toolbar_menu](https://www.drupal.org/project/toolbar_menu) so you can add custom Admin menus for each Role on the Toolbar menu.
 - Create **custom admin dashboards**, do not let authors use the default Drupal admin dashboard/backend.
 
 ---
@@ -138,7 +139,7 @@
 - Follow the [Atomic design](https://patternlab.io/) philosophy for the CSS as also as for the design and html.
 - For multiple themers team or large projects prefer working with **twig templates** only (eg adding html classe for each view mode) so no theme settings exist on database.
 - For 1 themer team you can use the field UI to move fields around (so theming exists on database).
-- Avoid using modules **panels, panelizer, panels_everywhere** and of this family.
+- Avoid using modules **panels, panelizer, panels_everywhere** and modules of this family.
 - Use preprocess functions on `.theme` file to add custom html classes or other attributes, twig variables etc.
 - Don't forget to create templates for special pages (404, 403, maintenance, login page etc).
 - For large projects with many templates investigate using modules [components](https://www.drupal.org/project/components), [ui_patterns](https://www.drupal.org/project/ui_patterns) and family, [storybook](https://storybook.js.org/), [pattern_library](https://www.drupal.org/project/pattern_library) as also as [Patternlab library](https://drupal-pattern-lab.github.io).
@@ -149,12 +150,12 @@
 - For complicated content structure requirements investigate using module [paragraphs](https://www.drupal.org/project/paragraphs).
 - Consider using the most common breakpoints for responsive design and use the same breakpoints for Drupal breakpoints also (340px, 768px, 1024px, 1600px).
 - Use SASS/SCSS.
-- Support IE11 and above browsers and follow the [Drupal project browser support](https://www.drupal.org/docs/8/system-requirements/browser-requirements). We are not styling with that in mind but will deal with it when finished.
+- Support IE11 and above browsers and follow the [Drupal project browser support](https://www.drupal.org/docs/8/system-requirements/browser-requirements). We are not styling with that in mind but will deal with it when finished. Notice that [Drupal 10.x dropped support for IE11](https://www.drupal.org/node/3199540).
 - Override only the necessary CSS coming from each module. Do not copy and paste all the CSS of a module to the project Theme.
 - Be careful when overriding CSS/JS as also as html structure especially if it is coming from Core. This may break core built-in functionality.
 - For large scale projects investigate using a "utility-first/functional" CSS framework like [tailwind](https://tailwindcss.com), [tachyons](http://tachyons.io) etc.
 - For the Admin pages use the default Core admin theme (Seven) and simply attach your CSS/JS files to add some functionality. This will happen on a custom module or a subtheme.
-- If you want to override a twig template get only from the source module that provides that. Eg if you want to override the `html.html.twig` file copy that from the system module.
+- If you want to override a twig template get only from the source module that provides that. Eg if you want to override the `html.html.twig` file copy that from the system module or from the base theme if exists.
 - Under the Theme folder create new subfolders to group files only if there is a significant amount of them and it makes sense to separate theme. Eg split the twig files to templates/system, templates/block etc using the pattern templates/[module] if there are 3 files of the system and 2 files of the block module.
 - Avoid using the path alias (eg related classes) of a webpage to style the page. Path aliases are considered unstable and could change frequently.
 - Do not use non semantic CSS classes. Saying that we should not use classes such as "clearfix, container, full-width" etc if these classes are used to provide some CSS styling. Instead use SASS mixins such as `@full-width {width: 100%}`.
@@ -187,6 +188,7 @@
 #### 4.3 VCS - git
 - Use a git online UI (GitHub, Gitlab, Bitbucket etc). On the same system add your issues, documentation and [CI](http://cgit.drupalcode.org/drupal/tree/core/drupalci.yml) automation workflows.
 - Prefer using the [Feature branch workflow](https://www.atlassian.com/git/tutorials/comparing-workflows/feature-branch-workflow) with 1 only master branch, feature specific branches (for tasks and development), pull requests for feature branches and git tags for live environment and so on.
+- Prefer using **git tags** for production deployment.
 
 #### 4.4 Drupal scaffolding
 - Avoid using the [Drupal core composer.json](http://cgit.drupalcode.org/drupal/tree/composer.json) file as the main composer.json file. You may have conflicts when updating drupal core.
@@ -241,7 +243,7 @@
 - [devel](https://www.drupal.org/project/devel)
 - [masquerade](https://www.drupal.org/project/masquerade)
 - [reroute_email](https://www.drupal.org/project/reroute_email)
-- [simplei](https://www.drupal.org/project/simplei)
+- [simplei](https://www.drupal.org/project/simplei), [environment_indicator](https://www.drupal.org/project/environment_indicator)
 - [structure_sync](https://www.drupal.org/project/structure_sync)
 - [config_split](https://www.drupal.org/project/config_split)
 - [config_installer](https://www.drupal.org/project/config_installer)
@@ -264,7 +266,7 @@
 ### 6. Useful resources
 
 #### 6.1 Tools
-- [DrupalTools](https://drupaltools.github.io)
+- [DrupalTools.com](https://drupaltools.com)
 - [acquia/drupal-spec-tool](https://github.com/acquia/drupal-spec-tool)
 
 #### 6.2 Drupal reporting modules
