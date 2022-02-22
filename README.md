@@ -57,6 +57,7 @@
 #### 2.4 Other content entities
 - For other content entities like paragraphs, comments, media,  etc the rules are the same as for Nodes.
 - Be careful with the translations especially for paragraphs because paragraphs use revisions by default.
+- For **Image Styles** try to use generic machine names, one word if possible that are not related to the image dimensions. For example the machine name `large_1920x570` is wrong and should be written as `large_wide` etc.
 
 #### 2.5 Fields
 - Common fields should be named as generic as possible, but at the same time very clear (Correct: "field_body, field_summary, field_author". Incorrect: "field_article_body, field_b")
