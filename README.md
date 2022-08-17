@@ -247,7 +247,6 @@
 - [simplei](https://www.drupal.org/project/simplei), [environment_indicator](https://www.drupal.org/project/environment_indicator)
 - [structure_sync](https://www.drupal.org/project/structure_sync)
 - [config_split](https://www.drupal.org/project/config_split)
-- [config_installer](https://www.drupal.org/project/config_installer)
 - [backup_migrate](https://www.drupal.org/project/backup_migrate)
 
 #### 4.10 Modules to avoid on live environments
