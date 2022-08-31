@@ -202,6 +202,7 @@
 - Try to not track composer downloaded files on git (eg module/contrib, themes/contrib, core, vendor folders etc). Track them only if you have no options to run `composer install` on the online servers.
 - Prefer using a specific version for all packages and especially for Drupal core (eg `"drupal/core": "8.8.10"` instead of `"drupal/core": "^8.8"`)
 - Patches should be added with composer using [cweagans/composer-patches](https://github.com/cweagans/composer-patches).
+- Patches added should be static files (eg from a Drupal.org issue or a local folder). Do not use the Drupal Gitlab Merge Request diff generated from an "Issue fork branch" (see https://www.drupal.org/node/3172805) as a patch because this file is a dynamic one and may change on any new commits. 
 - Keep the `config` folder out of the web files folder but track it on git.
 - Keep the `vendor` folder out of the web files folder.
 - Scaffolding code should exist on the project root (eg ansible, bash, dockerfile etc) either to create the environment on a CI or a VM.
