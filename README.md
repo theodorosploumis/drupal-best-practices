@@ -252,7 +252,7 @@
 
 #### 4.10 Modules to avoid on live environments
 - dblog (use monolog or syslog instead)
-- See also [Acquia - Module incompatibilities](https://docs.acquia.com/acquia-cloud/develop/drupal/module-incompatibilities)
+- See also [Acquia - Module incompatibilities](https://docs.acquia.com/acquia-cloud/develop/drupal/module-incompatibilities) and [Acquia - Modules to use with caution](https://docs.acquia.com/cloud-platform/develop/drupal/module-caution/)
 
 ---
 
