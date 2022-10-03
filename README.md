@@ -185,6 +185,7 @@
 - When creating a Drupal distribution use an 1 word machine name without underscores (eg prefer "myproject" instead of "my_project").
 - All custom specific modules MUST be prefixed with `projectmachinename_`.
 - Use [drupal console](https://drupalconsole.com) or [drush](https://github.com/drush-ops/drush) to generate code (modules, plugins etc).
+- For any code comments follow the rules from [Best practices for writing code comments, stackoverflow.blog by Ellen Spertus, 2021](https://stackoverflow.blog/2021/12/23/best-practices-for-writing-code-comments/)
 
 #### 4.3 VCS - git
 - Use a git online UI (GitHub, Gitlab, Bitbucket etc). On the same system add your issues, documentation and [CI](http://cgit.drupalcode.org/drupal/tree/core/drupalci.yml) automation workflows.
