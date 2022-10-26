@@ -177,6 +177,7 @@
 #### 4.2 Coding
 - (7.x) All functions MUST be namespaced with the full module or theme name as a prefix.
 - (7.x) A leading underscore MUST be prefixed to the function name for "private" functions.
+- **All machine names should make sense for humans**. Examples of bad machine names: `field_mytype_ac_y_d_year`, `field_field_year`, `field_n_s_i_s_d_s_c`.
 - Private functions should never be called from outside of the module in which they are declared.
 - Private functions should be declared at the bottom of a file.
 - Php Classes and Functions MUST be documented with "docblocks".
