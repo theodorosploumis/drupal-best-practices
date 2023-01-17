@@ -273,13 +273,12 @@
 - [acquia/drupal-spec-tool](https://github.com/acquia/drupal-spec-tool)
 
 #### 6.2 Drupal reporting modules
-- [field_report (8.x)](https://www.drupal.org/project/field_report)
+- [mysqlreport (7.x)](https://www.drupal.org/project/mysqlreport)
 - [content_report (7.x)](https://www.drupal.org/project/content_report)
 - [prod_check (7.x, 8.x)](https://www.drupal.org/project/prod_check)
 - [site_audit (drush plugin 7.x, 8.x)](https://www.drupal.org/project/site_audit)
-- [quant (7.x)](https://www.drupal.org/project/quant)
-- [mysqlreport (7.x)](https://www.drupal.org/project/mysqlreport)
 - [unused_modules (7.x, 8.x)](https://www.drupal.org/project/unused_modules)
+- [field_report (8.x)](https://www.drupal.org/project/field_report)
 
 #### 6.3 Articles & Guides
 - [Drupal development standards](https://www.drupal.org/docs/develop)
