@@ -310,4 +310,4 @@
 ---
 
 ### License
-[MIT](LICENSE) 2018 - 2022
+[MIT](LICENSE) 2018 - now
