@@ -2,12 +2,12 @@
 
 > This is a short, opinion based, **short list** with common best practices for developing a Drupal (8.x) website.
 
-### Preface
+## Preface
 
 - If you need to create a **Report** for a Drupal project please head to https://github.com/theodorosploumis/drupal-report.
 - If you need a **example checkbox list** for a "Drupal best practices" setup please check https://github.com/theodorosploumis/drupal-report/blob/master/example-report.md.
 
-### 1. Parameters to consider
+## 1. Parameters to consider
 - **Technical specification document**.
 - A **brief of the project scope**.
 - **Old project** (if exists).
@@ -25,9 +25,9 @@
 
 ---
 
-### 2. Site building
+## 2. Site building
 
-#### 2.1 Nodes
+### 2.1 Nodes
 - Entity and bundle name should use only singular name (Correct:  content type "page". Incorrect: content type "pages").
 - Don't use nodes to create dynamic blocks (eg a block slideshow). Create a custom entity instead or better a custom block type.
 - Create a new Node bundle only when this bundle needs to have different display options, different functionality, too many different fields and needs specific management.
@@ -39,7 +39,7 @@
 - Avoid very generic machine names or names that have been used already on the site even for another type of functionality (Views, Content types, Blocks, Plugins etc).
 - All Content types should have a Description to inform the user or developer about their need.
 
-#### 2.2 Blocks
+### 2.2 Blocks
 - Custom Blocks should follow this pattern for the machine name: [machinename]. That means you should use only letters and no special character or space.
 - Create custom Block Types using code.
 - For "static" like Blocks (eg with static html content that have only 1 instance) create Block Plugins through code. Avoid adding Blocks uging fixed "uuids" through a hook_install() or hook_update_N() function. Blocks with uuids are considered content and thus you may have problems with config sync, translations etc. See an example of a simple Block plugin on [ExampleUppercaseBlock.php](https://git.drupalcode.org/project/examples/-/blob/3.x/modules/block_example/src/Plugin/Block/ExampleUppercaseBlock.php)
@@ -48,18 +48,18 @@
 - On the machine_name add a basic, generic name that will describe the block functionality. Eg banner, list,  header etc.
 - On the machine_name do not add any region/theme/placement etc related info.
 
-#### 2.3 Taxonomy
+### 2.3 Taxonomy
 - Entity and bundle name should use only singular name (Correct: vocabulary "author". Incorrect: vocabulary "authors").
 - Use taxonomy terms only when you need to show pages of categorized content.
 - Don't use taxonomy terms just to filter content. Instead use list type fields.
 - When the taxonomies need to have authorization, extra fields and different display types investigate using a node type entity reference.
 
-#### 2.4 Other content entities
+### 2.4 Other content entities
 - For other content entities like paragraphs, comments, media,  etc the rules are the same as for Nodes.
 - Be careful with the translations especially for paragraphs because paragraphs use revisions by default.
 - For **Image Styles** try to use generic machine names, one word if possible that are not related to the image dimensions. For example the machine name `large_1920x570` is wrong and should be written as `large_wide` etc.
 
-#### 2.5 Fields
+### 2.5 Fields
 - Common fields should be named as generic as possible, but at the same time very clear (Correct: "field_body, field_summary, field_author". Incorrect: "field_article_body, field_b")
 - Specific fields should have entity name in the name, separated by underscore (Correct: "field_author_name, field_author_mail, field_author_address". Incorrect: "field_name, field_authorname").
 - Fields machine name should follow this pattern for the machine name:  `field_[content_type_machine_name]_[short_name]`.
@@ -70,7 +70,7 @@
 - Remove `gif` from allowed file extensions for image fields except if there are special requirements.
 - Consider using a fixed number of letters for the prefixes everywhere eg in a 3 letter prefix pattern there whould be `field_srd_` for shared fields, `field_art_` for Article node type only fields etc.
 
-#### 2.6 (Drupal) Views
+### 2.6 (Drupal) Views
 - Views should follow this pattern for the machine name: [machinename]. That means you should use only letters and no special character or space.
 - Remove the suffix `_1` from the default machine name that Views create for a new Views display (eg "page_1" should be "page").
 - It is required to give a meaningful (Administrative) name, description and tags to the Views. Do not leave the default values.
@@ -87,11 +87,11 @@
 - Disable all unused Views.
 - If you clone a View be careful to satisfy the above rules.
 
-#### 2.7 Forms
+### 2.7 Forms
 - Use [webform](https://www.drupal.org/project/webform) module to create custom forms.
 - Use **core Contact form** only if there are no special requirements (eg one only contact form, no need to keep submissions, few filds only etc).
 
-#### 2.8 Text formats and editors
+### 2.8 Text formats and editors
 - Try to use only 1 HTML allowed editor format. Multiple HTML allowed formats will have issues with multiple authors with different editing permissions.
 - Administrators should not use any extra format (full_html etc) that will not be available for Authors since all the Content must be editable by the portal Managers/Authors etc.
 - Use CKEditor for HTML allowed format.
@@ -110,13 +110,13 @@
 - Be careful with the CKEditor `inline-images`. Normally you should not allow users to add images on CKEditor but use a specific image field to do so.
 - If you allow the "link" button for CKEditor you normally need to install additional modules such as [linkit](https://www.drupal.org/project/linkit), [editor_advanced_link](https://www.drupal.org/project/editor_advanced_link), [pathologic](https://www.drupal.org/project/pathologic) etc.
 
-#### 2.9 Menus & navigation
+### 2.9 Menus & navigation
 - If using a pathauto pattern for path aliases consider using structured paths where each parent has a page.
 - Avoid using non English characters for path aliases.
 - For placeholder paths (that go nowhere) use the `<nolink>` as path value.
 - Menus should always be menus. Non menu blocks used as menus have accessibility issues and missing valuable details for the browser (eg the `is-active` class).
 
-#### 2.10 Users, roles & permissions
+### 2.10 Users, roles & permissions
 - Use an "Administrator" role only when you need to add more than 1 Administrators.
 - Split roles by Persona (not by functionality).
 - Do not allow authors access pages and options that they have nothing to do (hide empty admin pages).
@@ -133,7 +133,7 @@
 
 ---
 
-### 3. Theming, templates
+## 3. Theming, templates
 - Use **only one word for your theme machine name**. This is to reduce complexity and improve readability on theme hooks, template suggestions etc.
 - When using a non-core base theme try to **not add the base theme machine name on the subtheme**. For example if the base theme is "bootstrap" do not create a subtheme with machine name "something_bootstrap". This is because we would not like to mess with the machine name of the base theme when renaiming theme libraries, hook functions etc. It is better to keep the new subtheme machine name totally independent.
 - Do not use the word `theme` on your custom machine name.
@@ -169,12 +169,12 @@
 
 ---
 
-### 4. Development
+## 4. Development
 
-#### 4.1 Documentation
-- Create a README file written for humans where you store all the development steps.
+### 4.1 Documentation
+- Create a README.md file written for humans where you store all the development steps.
 
-#### 4.2 Coding
+### 4.2 Coding
 - (7.x) All functions MUST be namespaced with the full module or theme name as a prefix.
 - (7.x) A leading underscore MUST be prefixed to the function name for "private" functions.
 - **All machine names should make sense for humans**. Examples of bad machine names: `field_mytype_ac_y_d_year`, `field_field_year`, `field_n_s_i_s_d_s_c`.
@@ -188,12 +188,12 @@
 - Use [drupal console](https://drupalconsole.com) or [drush](https://github.com/drush-ops/drush) to generate code (modules, plugins etc).
 - For any code comments follow the rules from [Best practices for writing code comments, stackoverflow.blog by Ellen Spertus, 2021](https://stackoverflow.blog/2021/12/23/best-practices-for-writing-code-comments/)
 
-#### 4.3 VCS - git
+### 4.3 VCS - git
 - Use a git online UI (GitHub, Gitlab, Bitbucket etc). On the same system add your issues, documentation and [CI](http://cgit.drupalcode.org/drupal/tree/core/drupalci.yml) automation workflows.
 - Prefer using the [Feature branch workflow](https://www.atlassian.com/git/tutorials/comparing-workflows/feature-branch-workflow) with 1 only master branch, feature specific branches (for tasks and development), pull requests for feature branches and git tags for live environment and so on.
 - Prefer using **git tags** for production deployment.
 
-#### 4.4 Drupal scaffolding
+### 4.4 Drupal scaffolding
 - Avoid using the [Drupal core composer.json](http://cgit.drupalcode.org/drupal/tree/composer.json) file as the main composer.json file. You may have conflicts when updating drupal core.
 - Use the official [drupal/recommended-project](https://github.com/drupal/recommended-project) for Drupal initial build except if the hosting provider proposes a different method (eg a ready to use composer.json file).
 - Use only 1 custom `settings.php` that includes environment specific additional settings files. Track the settings.php file on git but not the additional settings files.
@@ -213,17 +213,17 @@
 - Less modules is better.
 - Try to use only core modules and add contributed modules only if required.
 
-#### 4.5 Infrastructure
+### 4.5 Infrastructure
 - Don't rise the recommended php memory_limit when there are relevant issues. Try to figure out what causes the memory_limit timeout.
 - Run cron externally (disable core cron settings).
 - Use a custom SMTP server to send emails.
 
-#### 4.6 Backups
+### 4.6 Backups
 - Keep backups for the database with date specific pattern names (eg "livedb-2019-01-29T18:33:46+0200.sql.gz").
 - User generated public or private files (eg sites/default/files) should be backup separately from the database.
 - Always take a backup of current site before restoring a backup.
 
-#### 4.7 Testing
+### 4.7 Testing
 - Write tests by bundle.
 - Generate dummy content.
 - Test the machine_name pattern.
@@ -233,7 +233,7 @@
 - Test the access permissions per user Role (IMPORTANT).
 - Investigate using a predefined, automated testing tool like [acquia/drupal-spec-tool](https://github.com/acquia/drupal-spec-tool).
 
-#### 4.8 Third party libraries
+### 4.8 Third party libraries
 - Before adding an external library/dependency check if it is already available [on Core](http://cgit.drupalcode.org/drupal/tree/core/core.libraries.yml).
 - Many well known `dev` related PHP packages are already included on [drupal/core-dev](https://packagist.org/packages/drupal/core-dev) so you may require only this package instead of several others.
 - Prefer tiny and specific libraries.
@@ -242,7 +242,7 @@
 - Always use a release of a library (if available) and not a generic branch.
 - If you care about performance try to download the libraries locally instead of using a CDN source.
 
-#### 4.9 Modules to use for development
+### 4.9 Modules to use for development
 - [stage_file_proxy](https://www.drupal.org/project/stage_file_proxy)
 - [devel](https://www.drupal.org/project/devel)
 - [masquerade](https://www.drupal.org/project/masquerade)
@@ -252,13 +252,13 @@
 - [config_split](https://www.drupal.org/project/config_split)
 - [backup_migrate](https://www.drupal.org/project/backup_migrate)
 
-#### 4.10 Modules to avoid on live environments
+### 4.10 Modules to avoid on live environments
 - dblog (use monolog or syslog instead)
 - See also [Acquia - Module incompatibilities](https://docs.acquia.com/acquia-cloud/develop/drupal/module-incompatibilities) and [Acquia - Modules to use with caution](https://docs.acquia.com/cloud-platform/develop/drupal/module-caution/)
 
 ---
 
-### 5. Hosting
+## 5. Hosting
 - When selecting hosting consider additional needs such as CDN, SSL, Monitoring, Development Automation, development tools available etc.
 - In order to **support the project** technically (Drupal updates, security issues, technical support) use a hosting solution that allows to install drush, git, composer and supports system logging, cron jobs and ssh login. Otherwise use a Drupal specific hosting solution (**Acquia, Pantheon, Platform.sh**).
 - If you want to host multiple similar sites with the same code base (multisites) investigate using [Aegir](http://www.aegirproject.org) solutions such as [BOA](https://github.com/omega8cc/boa).
@@ -266,7 +266,7 @@
 
 ---
 
-### 6. Useful resources
+## 6. Useful resources
 
 #### 6.1 Tools
 - [DrupalTools.com](https://drupaltools.com)
@@ -307,6 +307,46 @@
 - [github.com/wearewondrous/drupal-8-best-practices](https://github.com/wearewondrous/drupal-8-best-practices)
 - [Gist: Drupal Site Building Best Practices](https://gist.github.com/Greg-Boggs/8a2661b70c4e293db585)
 - [Gist: Stanford Web Services Drupal Development Standards](https://gist.github.com/sherakama/d71f9a6070ed9264edf4)
+
+---
+
+## 7. Appendix
+
+### Machine names examples
+
+Examples of good (👍) and bad (❌) practices in machine names.
+
+| Type | 👍 | ❌  |
+|:----:|:--:|:--:|
+| User role | admin | super_administrator |
+| Field | field_a_l_of_links | field_links |
+| Taxonomy field | field_countries | field_taxonomy_country |
+| Node long text field | field_wysiwyg_body | field_body |
+| Node referene field | field_rel_news | field_related_news |
+| Media field | field_other_partner_files | field_media_files |
+| Paragraph reference field | field_partners | field_paragraph(s)_partner |
+| Dedicated field of a Node bundle Product | field_price | field_product_price |
+| View mode | news_simple | simple |
+| View mode | wide_teaser | wide |
+| Views page | views.latest_news.page_1 | views.latest_news.page |
+| Views autocomplete reference | views.related_countries.ref | views.countries.reference |
+| Image style | large_600_300 | large |
+| Image style | 200_800 | vertical |
+
+### Common correct machine names for image styles
+
+- original (a placeholder without any image processing so we can override it later without the need to change several view modes)
+- large
+- small
+- wide
+- teaser
+- teaser_small|medium|large
+- vertical_smal|medium|large
+- square
+- square_small|medium|large
+- tiny
+- avatar
+- full_width
 
 ---
 
