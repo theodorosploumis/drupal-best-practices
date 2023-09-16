@@ -317,7 +317,7 @@
 Examples of good (👍) and bad (❌) practices in machine names.
 
 | Type | 👍 | ❌  |
-|:----:|:--:|:--:|
+|------|----|-----|
 | User role | admin | super_administrator |
 | Field | field_a_l_of_links | field_links |
 | Taxonomy field | field_countries | field_taxonomy_country |
