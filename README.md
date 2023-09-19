@@ -314,11 +314,12 @@
 
 ### Machine names examples
 
-Examples of good (👍) and bad (❌) practices in machine names.
+Examples of good (🙂) and bad (❌) practices in machine names.
 
-| Type | 👍 | ❌  |
+| Type | ❌ | 🙂 |
 |------|----|-----|
-| User role | admin | super_administrator |
+| User role | super_administrator | admin |
+| User role | authors | author |
 | Entity bundle | newsarticle | news |
 | Entity bundle | events | event |
 | Entity bundle | countrypage | country |
