@@ -319,6 +319,9 @@ Examples of good (👍) and bad (❌) practices in machine names.
 | Type | 👍 | ❌  |
 |------|----|-----|
 | User role | admin | super_administrator |
+| Entity bundle | newsarticle | news |
+| Entity bundle | events | event |
+| Entity bundle | countrypage | country |
 | Field | field_a_l_of_links | field_links |
 | Taxonomy field | field_countries | field_taxonomy_country |
 | Node long text field | field_wysiwyg_body | field_body |
