@@ -336,6 +336,7 @@ Examples of good (🙂) and bad (❌) practices in machine names.
 | Views autocomplete reference | views.related_countries.ref | views.countries.reference |
 | Image style | large_600_300 | large |
 | Image style | 200_800 | vertical |
+| Image style | 3_2 | ratio_3_2 |
 
 ### Common correct machine names for image styles
 
