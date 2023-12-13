@@ -286,6 +286,7 @@
 - [Building a collaborative Drupal 8.x distribution](http://dropdog.readthedocs.io/)
 - [7.x site building best practices](https://www.drupal.org/docs/7/site-building-best-practices)
 - [Checklist for launching a site](https://www.drupal.org/node/1076460)
+- [Drupal Theming Do's and Don'ts, 2023](https://evolvingweb.com/blog/drupal-theming-dos-and-donts)
 - [Drupal 8 Best Practices 2016](https://github.com/WondrousLLC/drupal-8-best-practices)
 - [Drupal 8 Composer Best Practices](https://www.lullabot.com/articles/drupal-8-composer-best-practices)
 - [Drupal 8 Site building best practices](http://www.gregboggs.com/drupal8-site-building-best-practices)
