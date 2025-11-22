@@ -315,9 +315,9 @@
 
 ### Machine names examples
 
-Examples of good (🙂) and bad (❌) practices in machine names.
+Examples of good (🙂) and bad (☹️) practices in machine names.
 
-| Type | ❌ | 🙂 |
+| Type | ☹️ | 🙂 |
 |------|----|-----|
 | User role | super_administrator | admin |
 | User role | authors | author |
