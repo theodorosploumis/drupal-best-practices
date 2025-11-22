@@ -208,7 +208,7 @@
 - Keep the `config` folder out of the web files folder but track it on git.
 - Keep the `vendor` folder out of the web files folder.
 - Scaffolding code should exist on the project root (eg ansible, bash, dockerfile etc) either to create the environment on a CI or a VM.
-- Use [Drupal Features](https://www.drupal.org/project/features) to organize your config into modules only when you need to export this to reusable modules.
+- Use [Drupal Features](https://www.drupal.org/project/features) or [recipes](https://www.drupal.org/docs/extending-drupal/drupal-recipes) to organize your config into modules only when you need to export this to reusable modules.
 - Use `drush config-import/config-export` (or additional drush options like `drush cex/cim`) to manage config.
 - Less modules is better.
 - Try to use only core modules and add contributed modules only if required.
