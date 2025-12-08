@@ -117,7 +117,7 @@
 - Menus should always be menus. Non menu blocks used as menus have accessibility issues and missing valuable details for the browser (eg the `is-active` class).
 
 ### 2.10 Users, roles & permissions
-- Use an "Administrator" role only when you need to add more than 1 Administrators.
+- Use an "Administrator" role only when you neednpm install -g lighthouse to add more than 1 Administrators.
 - Split roles by Persona (not by functionality).
 - Do not allow authors access pages and options that they have nothing to do (hide empty admin pages).
 - Don't allow multiple real persons to share the same Drupal Account. Consider creating 1 account per person.
@@ -194,6 +194,7 @@
 - Prefer using **git tags** for production deployment.
 
 ### 4.4 Drupal scaffolding
+- Each project should use a local docker based tool for development like **ddev** (preferably), lando etc.
 - Avoid using the [Drupal core composer.json](http://cgit.drupalcode.org/drupal/tree/composer.json) file as the main composer.json file. You may have conflicts when updating drupal core.
 - Use the official [drupal/recommended-project](https://github.com/drupal/recommended-project) for Drupal initial build except if the hosting provider proposes a different method (eg a ready to use composer.json file).
 - Use only 1 custom `settings.php` that includes environment specific additional settings files. Track the settings.php file on git but not the additional settings files.
