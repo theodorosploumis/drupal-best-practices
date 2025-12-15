@@ -312,7 +312,69 @@
 
 ---
 
-## 7. Appendix
+## 7. Claude Skills
+
+This repository includes **Claude Code skills** that provide expert guidance for Drupal best practices.
+These skills can be used directly in Claude Code to get help with Drupal-specific tasks.
+
+### Install Claude Skills
+
+#### Option 1: Using the `/plugin` Command (Recommended)
+
+First, add this repository as a marketplace:
+```bash
+/plugin marketplace add theodorosploumis/drupal-best-practices
+```
+
+Then install the plugin (contains the Drupal skills):
+```bash
+/plugin install drupal-best-practices@theodorosploumis
+```
+
+#### Option 2: Clone to Local Directory
+```bash
+git clone https://github.com/theodorosploumis/drupal-best-practices.git ~/.claude/skills/drupal-best-practices
+```
+
+#### Option 3: Add to Claude Code Configuration
+Add to your Claude Code config file (`~/.claude/config.json`):
+```json
+{
+  "skillsPaths": [
+    "/path/to/drupal-best-practices/ai"
+  ]
+}
+```
+
+#### Available Claude Skills
+- **`drupal-nodes`** - Node bundle modeling and management
+- **`drupal-blocks`** - Custom block types and plugins
+- **`drupal-fields`** - Field design and configuration
+- **`drupal-forms`** - Form building with Webform
+- **`drupal-taxonomy`** - Vocabulary and term structure
+- **`drupal-views`** - View creation and optimization
+- **`drupal-theming`** - Theme development practices
+- **`drupal-config-parser`** - Parse and validate Drupal YAML configurations
+- **`drupal-other-content-entities`** - Paragraphs, media, and more
+- **`drupal-text-formats-editors`** - Text format configuration
+
+#### Usage Examples in Claude Code
+
+Once installed, the Drupal skills will be automatically available in Claude Code. You can use them by:
+
+1. **Starting a conversation with context about your Drupal project**
+2. **Claude will automatically use the relevant skills based on your requests**
+
+Example prompts:
+- "Help me design a content type for articles with revisions"
+- "Create a view for latest blog posts with pagination"
+- "How should I structure my theme for a Drupal 10 site?"
+
+For detailed information about the AI integration kit, see the [`ai/`](ai/) directory.
+
+---
+
+## 8. Appendix
 
 ### Machine names examples
 

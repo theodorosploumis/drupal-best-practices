@@ -1,11 +1,21 @@
 #!/usr/bin/env bash
 set -euo pipefail
 
-# Validate README section 2.6 Views rules.
+# Validate Views rules.
+#
+# This script automatically detects if you're in a DDEV environment
+# and will use 'ddev drush' instead of 'drush' accordingly.
 
-command -v drush >/dev/null 2>&1 || { echo "drush is required" >&2; exit 1; }
+# Get the directory where this script is located
+SCRIPT_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
 
-drush php:eval '
+# Source the DDEV Drush helper
+source "$SCRIPT_DIR/ddev-drush-helper.sh"
+
+# Check if Drush is available (with DDEV support)
+check_drush
+
+run_drush php:eval '
 use Drupal\views\Views;
 $fail = 0;
 $storage = \Drupal::entityTypeManager()->getStorage("view");

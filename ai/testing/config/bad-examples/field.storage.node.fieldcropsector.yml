@@ -1,0 +1,20 @@
+uuid: a78f1676-e23e-4db4-9408-3ed0edc4bce4
+langcode: en
+status: true
+dependencies:
+  module:
+    - node
+    - taxonomy
+id: node.fieldcropsector
+field_name: fieldcropsector
+entity_type: node
+type: entity_reference
+settings:
+  target_type: taxonomy_term
+module: core
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

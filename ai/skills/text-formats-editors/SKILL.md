@@ -1,0 +1,35 @@
+---
+id: drupal-text-formats-editors
+title: Text Formats and Editors
+summary: Standardize HTML formats and editor settings for safe, consistent authoring.
+maintainers:
+  - Theodoros Ploumis https://github.com/theodorosploumis
+tags:
+  - drupal
+  - site-building
+  - text-formats
+  - ckeditor
+source: README.md
+---
+
+## Description
+Help Claude align text formats, allowed tags, and CKEditor button sets so authors share a consistent, secure HTML format.
+
+## Usage
+- Ask for a single standardized HTML format with matching CKEditor settings and allowed HTML tags.
+- Request button set recommendations that mirror allowed tags and remove insecure options.
+- Have Claude plan format access to avoid authors switching between overlapping formats.
+
+## Guardrails
+- Keep insecure content out of WYSIWYG; align editor buttons with allowed tags.
+- Limit format switching by mirroring access controls and keeping formats minimal.
+- Prefer one HTML format for most authors; ensure admin formats align with policy.
+
+## Validation
+```bash
+./ai/scripts/validate-text-formats.sh
+```
+
+## References
+- Drupal Best Practices README.
+- Standardize on CKEditor for Drupal 10+.

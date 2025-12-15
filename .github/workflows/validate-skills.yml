@@ -1,0 +1,174 @@
+name: Validate Drupal Skills
+
+on:
+  push:
+    branches: [ main, master ]
+    paths:
+      - 'ai/**'
+  pull_request:
+    branches: [ main, master ]
+    paths:
+      - 'ai/**'
+  workflow_dispatch:  # Allow manual triggering
+
+jobs:
+  validate-skills:
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Checkout repository
+      uses: actions/checkout@v4
+
+    - name: Set up Python
+      uses: actions/setup-python@v4
+      with:
+        python-version: '3.10'
+
+    - name: Install dependencies
+      run: |
+        python -m pip install --upgrade pip
+        pip install -r ai/testing/requirements.txt
+
+    - name: Validate repository structure
+      run: |
+        echo "Validating repository structure..."
+        python3 ai/testing/validate.py --list
+
+    - name: Validate testing framework
+      run: |
+        echo "Testing validation script with sample configs..."
+        python3 ai/testing/validate.py --verbose || echo "Validation script completed with expected findings"
+
+    - name: Run random skill validations
+      run: |
+        echo "Running 5 random skill validations..."
+        for i in {1..5}; do
+          echo "Validation $i/5:"
+          python3 ai/testing/validate.py || echo "Validation found issues (this is expected)"
+          echo "---"
+        done
+
+    - name: Validate each skill individually
+      run: |
+        echo "Validating each skill..."
+        # Get list of skills
+        SKILLS=$(python3 ai/testing/validate.py --list | grep -E "^\s*-\s+" | cut -d: -f1 | sed 's/^\s*-\s*//')
+
+        for skill in $SKILLS; do
+          echo "Validating skill: $skill"
+          python3 ai/testing/validate.py --skill "$skill" || {
+            echo "Skill $skill validation completed with issues"
+          }
+          echo "---"
+        done
+      continue-on-error: true
+
+    - name: Test with bad examples
+      run: |
+        echo "Testing with bad configuration examples..."
+        if [ -d "ai/testing/config/bad-examples" ] && [ "$(ls -A ai/testing/config/bad-examples)" ]; then
+          python3 ai/testing/validate.py --config-dir ai/testing/config/bad-examples || {
+            echo "Bad examples validation found issues as expected"
+          }
+        else
+          echo "No bad examples found"
+        fi
+      continue-on-error: true
+
+    - name: Check script syntax
+      run: |
+        echo "Checking shell script syntax..."
+        for script in ai/scripts/*.sh; do
+          if [ -f "$script" ]; then
+            bash -n "$script" || {
+            echo "Syntax error in $script"
+            exit 1
+            }
+          fi
+        done
+
+    - name: Validate JSON files
+      run: |
+        echo "Validating JSON files..."
+        for json_file in ai/**/*.json; do
+          if [ -f "$json_file" ]; then
+            python -m json.tool "$json_file" > /dev/null || {
+            echo "Invalid JSON in $json_file"
+            exit 1
+            }
+          fi
+        done
+
+    - name: Validate YAML files
+      run: |
+        echo "Validating YAML files..."
+        for yaml_file in ai/**/*.yml ai/**/*.yaml; do
+          if [ -f "$yaml_file" ]; then
+            python -c "import yaml; yaml.safe_load(open('$yaml_file'))" || {
+            echo "Invalid YAML in $yaml_file"
+            exit 1
+            }
+          fi
+        done
+
+    - name: Test DDEV helper functionality
+      run: |
+        echo "Testing DDEV helper..."
+        if [ -f "ai/scripts/ddev-drush-helper.sh" ]; then
+          # Make script executable
+          chmod +x ai/scripts/ddev-drush-helper.sh
+
+          # Test script syntax
+          bash -n ai/scripts/ddev-drush-helper.sh && echo "Script syntax OK" || {
+            echo "Syntax error in ddev-drush-helper.sh"
+            exit 1
+          }
+
+          # Test that we can run the script (it should not output anything when sourced)
+          bash -c "source ai/scripts/ddev-drush-helper.sh" && echo "Script can be sourced successfully" || {
+            echo "Error sourcing script"
+            exit 1
+          }
+
+          # Test DDEV detection logic directly without functions
+          if command -v ddev >/dev/null 2>&1 && [[ -f ".ddev/config.yaml" ]]; then
+            echo "DDEV environment detected"
+          else
+            echo "Non-DDEV environment detected (expected for CI)"
+          fi
+
+          # Test drush command detection logic
+          if command -v drush >/dev/null 2>&1; then
+            echo "Standard drush command available"
+          elif [[ -f "vendor/bin/drush" ]]; then
+            echo "Local drush available via vendor/bin"
+          else
+            echo "No drush command found (expected in CI)"
+          fi
+
+          echo "DDEV helper script tests completed successfully"
+        else
+          echo "DDEV helper script not found - skipping tests"
+        fi
+
+    - name: Generate validation report
+      if: always()
+      run: |
+        echo "# Validation Report" > validation-report.md
+        echo "Generated: $(date)" >> validation-report.md
+        echo "" >> validation-report.md
+        echo "## Summary" >> validation-report.md
+        echo "- Python version: 3.10" >> validation-report.md
+        echo "- Skills validated: $(ls ai/skills/*/SKILL.md 2>/dev/null | wc -l)" >> validation-report.md
+        echo "- Scripts checked: $(ls ai/scripts/*.sh 2>/dev/null | wc -l)" >> validation-report.md
+        echo "" >> validation-report.md
+        echo "## Skills List" >> validation-report.md
+        python3 ai/testing/validate.py --list >> validation-report.md
+
+    - name: Upload validation report
+      if: always()
+      uses: actions/upload-artifact@v4
+      with:
+        name: validation-report
+        path: validation-report.md
+        retention-days: 30

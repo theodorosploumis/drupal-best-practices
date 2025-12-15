@@ -1,0 +1,13 @@
+uuid: 1d9f5c72-b583-4a69-9289-5cf7ff3799f2
+langcode: en
+status: false
+dependencies:
+  module:
+    - menu_ui
+name: pages
+type: pages
+description: 'Static pages for the website'
+help: ''
+new_revision: false
+preview_mode: 1
+display_submitted: false

@@ -1,0 +1,9 @@
+uuid: cd9f5c72-b583-4a69-9289-5cf7ff3799fd
+langcode: en
+status: true
+dependencies: {  }
+name: Article Types
+vid: article_types
+description: ''
+hierarchy: 0
+weight: 0

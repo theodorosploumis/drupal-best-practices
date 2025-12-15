@@ -1,0 +1,15 @@
+uuid: fd9f5c72-b583-4a69-9289-5cf7ff3799f0
+langcode: en
+status: true
+dependencies:
+  config:
+    - filter.format.basic_format
+  module:
+    - editor
+editor: basic_format
+settings:
+  toolbar:
+    rows: 4
+    buttons: []
+  plugins: {  }
+image_upload: {  }

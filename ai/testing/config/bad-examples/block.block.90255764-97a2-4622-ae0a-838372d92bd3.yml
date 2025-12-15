@@ -1,0 +1,28 @@
+uuid: 90255764-97a2-4622-ae0a-838372d92bd3
+langcode: en
+status: true
+dependencies:
+  config:
+    - block_content.type.basic
+    - filter.format.basic_html
+  module:
+    - block_content
+  theme:
+    - bartik
+id: bartik_block_90255764
+theme: bartik
+region: sidebar_first
+weight: 0
+provider: null
+plugin: 'block_content:90255764-97a2-4622-ae0a-838372d92bd3'
+settings:
+  status: true
+  info: ''
+  view_mode: full
+  label: ''
+  label_display: visible
+visibility:
+  request_path:
+    id: request_path
+    pages: ''
+    negate: true

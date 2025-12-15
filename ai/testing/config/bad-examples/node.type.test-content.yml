@@ -1,0 +1,13 @@
+uuid: 8d9f5c72-b583-4a69-9289-5cf7ff3799f9
+langcode: en
+status: true
+dependencies:
+  module:
+    - menu_ui
+name: test-content
+type: test_content
+description: ''
+help: ''
+new_revision: true
+preview_mode: 1
+display_submitted: true
