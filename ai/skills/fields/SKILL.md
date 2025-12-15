@@ -2,11 +2,8 @@
 id: drupal-fields
 title: Drupal Fields
 summary: Name, describe, and reuse fields with clear ownership and scope.
-version: 0.2.0
-created: 2024-03-01
-updated: 2025-03-06
 maintainers:
-  - Drupal Best Practices Maintainers
+  - Theodoros Ploumis https://github.com/theodorosploumis
 tags:
   - drupal
   - site-building

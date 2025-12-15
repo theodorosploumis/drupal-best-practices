@@ -1,0 +1,21 @@
+uuid: ed9f5c72-b583-4a69-9289-5cf7ff3799ff
+langcode: en
+status: true
+dependencies: {  }
+name: 'Unrestricted HTML'
+format: unrestricted_html
+weight: -10
+filters:
+  filter_url:
+    id: filter_url
+    provider: filter
+    status: true
+    weight: 0
+    settings:
+      filter_url_length: 72
+  filter_htmlcorrector:
+    id: filter_htmlcorrector
+    provider: filter
+    status: true
+    weight: 10
+    settings: {  }

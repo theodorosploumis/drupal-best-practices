@@ -2,11 +2,8 @@
 id: drupal-blocks
 title: Drupal Blocks and Block Types
 summary: Create reusable custom blocks and plugins with disciplined naming and configuration.
-version: 0.2.0
-created: 2024-03-01
-updated: 2025-03-06
 maintainers:
-  - Drupal Best Practices Maintainers
+  - Theodoros Ploumis https://github.com/theodorosploumis
 tags:
   - drupal
   - site-building

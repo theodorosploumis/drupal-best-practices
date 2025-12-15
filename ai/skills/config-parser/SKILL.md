@@ -2,11 +2,8 @@
 id: drupal-config-parser
 title: Drupal Config Parser
 summary: Parse and validate Drupal configuration YAML files for best practices compliance
-version: 0.1.0
-created: 2025-01-15
-updated: 2025-01-15
 maintainers:
-  - Drupal Best Practices Maintainers
+  - Theodoros Ploumis https://github.com/theodorosploumis
 tags:
   - drupal
   - configuration

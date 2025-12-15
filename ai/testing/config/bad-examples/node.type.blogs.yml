@@ -1,0 +1,13 @@
+uuid: 7d9f5c72-b583-4a69-9289-5cf7ff3799f8
+langcode: en
+status: true
+dependencies:
+  module:
+    - menu_ui
+name: blogs
+type: blogs
+description: ''
+help: ''
+new_revision: true
+preview_mode: 1
+display_submitted: true

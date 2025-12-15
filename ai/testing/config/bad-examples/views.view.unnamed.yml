@@ -1,0 +1,37 @@
+uuid: 6d9f5c72-b583-4a69-9289-5cf7ff3799f7
+langcode: en
+status: true
+dependencies:
+  module:
+    - node
+id: some_view
+label: ''
+module: views
+description: ''
+tag: ''
+base_table: node_field_data
+base_field: nid
+display:
+  default:
+    display_plugin: default
+    id: default
+    display_title: Master
+    position: 0
+    display_options:
+      access:
+        type: perm
+        options:
+          perm: 'access content'
+      cache:
+        type: tag
+      style:
+        type: default
+      row:
+        type: fields
+      fields: {  }
+      filters: {  }
+      sorts: {  }
+    cache_metadata:
+      max-age: -1
+      contexts: {  }
+      tags: {  }

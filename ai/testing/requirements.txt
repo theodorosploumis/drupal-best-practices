@@ -1,0 +1,8 @@
+# Requirements for Drupal Skills Testing Framework
+# Install with: pip install -r requirements.txt
+
+# YAML parsing
+PyYAML>=6.0
+
+# Optional: For enhanced color output in terminals
+colorama>=0.4.4; sys_platform == "win32"

@@ -2,11 +2,8 @@
 id: drupal-theming
 title: Drupal Theming and Templates
 summary: Build Drupal themes with clean machine names, Twig-first templates, and atomic SCSS structure.
-version: 0.2.0
-created: 2024-03-01
-updated: 2025-03-06
 maintainers:
-  - Drupal Best Practices Maintainers
+  - Theodoros Ploumis https://github.com/theodorosploumis
 tags:
   - drupal
   - theming

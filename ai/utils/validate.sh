@@ -192,7 +192,7 @@ validate_skill_consistency() {
                 fi
             done
             if [[ "$found" == "false" ]]; then
-                print_warning "Skill directory exists but not in claude.json: claude-skills/$dir"
+                print_warning "Skill directory exists but not in claude.json: skills/$dir"
             fi
         fi
     done
