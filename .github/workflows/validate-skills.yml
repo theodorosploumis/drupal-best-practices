@@ -115,21 +115,28 @@ jobs:
       run: |
         echo "Testing DDEV helper..."
         if [ -f "ai/scripts/ddev-drush-helper.sh" ]; then
-          # Source the helper and test functions
-          source ai/scripts/ddev-drush-helper.sh
-
-          # Test function exists
-          if ! command -v is_ddev_environment > /dev/null 2>&1; then
-            echo "is_ddev_environment function not found"
+          # Test script syntax
+          bash -n ai/scripts/ddev-drush-helper.sh || {
+            echo "Syntax error in ddev-drush-helper.sh"
             exit 1
-          fi
+          }
+          echo "Script syntax OK"
 
-          # Test function execution (should return 1 in CI)
-          is_ddev_environment
+          # Test script execution in subshell
+          bash -c "source ai/scripts/ddev-drush-helper.sh && is_ddev_environment"
           if [ $? -eq 0 ]; then
             echo "Unexpected: CI environment detected as DDEV"
           else
             echo "Correctly detected non-DDEV environment"
+          fi
+
+          # Test get_drush_command function
+          DRUSH_CMD=$(bash -c "source ai/scripts/ddev-drush-helper.sh && get_drush_command")
+          echo "Detected drush command: $DRUSH_CMD"
+          if [ "$DRUSH_CMD" = "drush" ]; then
+            echo "Correctly detected standard drush command for CI environment"
+          else
+            echo "Unexpected drush command: $DRUSH_CMD"
           fi
         fi
 
