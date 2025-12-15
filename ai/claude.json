@@ -1,0 +1,91 @@
+{
+  "name": "Drupal Best Practices Skills",
+  "description": "Claude Code skills for Drupal 10+ best practices covering site building, theming, and development workflows",
+  "version": "1.0.0",
+  "author": "Drupal Best Practices Maintainers",
+  "homepage": "https://github.com/theodorosploumis/drupal-best-practices",
+  "skills": [
+    {
+      "id": "drupal-nodes",
+      "name": "Drupal Node Bundles",
+      "description": "Model and maintain node bundles using Drupal 10 site-building conventions",
+      "path": "skills/nodes",
+      "tags": ["drupal", "site-building", "nodes", "content-modeling"]
+    },
+    {
+      "id": "drupal-blocks",
+      "name": "Drupal Blocks",
+      "description": "Create and manage custom block types and plugins with proper naming conventions",
+      "path": "skills/blocks",
+      "tags": ["drupal", "site-building", "blocks", "plugins"]
+    },
+    {
+      "id": "drupal-fields",
+      "name": "Drupal Fields",
+      "description": "Design and configure fields with consistent naming patterns and reuse strategies",
+      "path": "skills/fields",
+      "tags": ["drupal", "site-building", "fields", "content-modeling"]
+    },
+    {
+      "id": "drupal-forms",
+      "name": "Drupal Forms",
+      "description": "Build forms using Webform module or core Contact form following best practices",
+      "path": "skills/forms",
+      "tags": ["drupal", "site-building", "forms", "webform"]
+    },
+    {
+      "id": "drupal-taxonomy",
+      "name": "Drupal Taxonomy",
+      "description": "Structure vocabularies and terms for proper categorization and content organization",
+      "path": "skills/taxonomy",
+      "tags": ["drupal", "site-building", "taxonomy", "categorization"]
+    },
+    {
+      "id": "drupal-views",
+      "name": "Drupal Views",
+      "description": "Create efficient views with proper machine names, displays, and access control",
+      "path": "skills/views",
+      "tags": ["drupal", "site-building", "views", "data-display"]
+    },
+    {
+      "id": "drupal-theming",
+      "name": "Drupal Theming",
+      "description": "Implement themes using atomic design, Twig, and modern frontend practices",
+      "path": "skills/theming",
+      "tags": ["drupal", "theming", "twig", "frontend"]
+    },
+    {
+      "id": "drupal-other-content-entities",
+      "name": "Drupal Other Content Entities",
+      "description": "Manage paragraphs, media, comments, and other content entities with consistency",
+      "path": "skills/other-content-entities",
+      "tags": ["drupal", "site-building", "content-entities", "paragraphs"]
+    },
+    {
+      "id": "drupal-text-formats-editors",
+      "name": "Drupal Text Formats and Editors",
+      "description": "Configure secure and consistent text formats with CKEditor integration",
+      "path": "skills/text-formats-editors",
+      "tags": ["drupal", "site-building", "text-formats", "ckeditor"]
+    },
+    {
+      "id": "drupal-config-parser",
+      "name": "Drupal Config Parser",
+      "description": "Parse and validate Drupal configuration YAML files for best practices compliance",
+      "path": "skills/config-parser",
+      "tags": ["drupal", "configuration", "validation", "static-analysis", "yml"]
+    }
+  ],
+  "categories": [
+    {
+      "id": "site-building",
+      "name": "Site Building",
+      "description": "Skills for Drupal site structure and content modeling"
+    },
+    {
+      "id": "theming",
+      "name": "Theming",
+      "description": "Skills for Drupal theme development and frontend"
+    }
+  ]
+}

@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 set -euo pipefail
 
-# Validate README section 2.1 Nodes rules against a Drupal 10+ site.
+# Validate Nodes rules against a Drupal 10+ site.
 # Requires: drush, Drupal bootstrap.
 
 command -v drush >/dev/null 2>&1 || { echo "drush is required" >&2; exit 1; }
