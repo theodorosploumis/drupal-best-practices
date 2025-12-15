@@ -1,0 +1,153 @@
+{
+  "name": "drupal-best-practices",
+  "owner": {
+    "name": "Theodoros Ploumis",
+    "email": "theodorosploumis@users.noreply.github.com"
+  },
+  "metadata": {
+    "description": "Drupal development best practices skills for Claude Code",
+    "version": "1.0.0"
+  },
+  "plugins": [
+    {
+      "name": "drupal-blocks",
+      "description": "Create reusable custom blocks and plugins with disciplined naming and configuration",
+      "source": "./ai/skills/blocks",
+      "strict": false,
+      "skills": [
+        {
+          "id": "drupal-blocks",
+          "title": "Drupal Blocks and Block Types",
+          "summary": "Create reusable custom blocks and plugins with disciplined naming and configuration",
+          "tags": ["drupal", "site-building", "blocks"]
+        }
+      ]
+    },
+    {
+      "name": "drupal-config-parser",
+      "description": "Parse and validate Drupal configuration YAML files for best practices compliance",
+      "source": "./ai/skills/config-parser",
+      "strict": false,
+      "skills": [
+        {
+          "id": "drupal-config-parser",
+          "title": "Drupal Config Parser",
+          "summary": "Parse and validate Drupal configuration YAML files for best practices compliance",
+          "tags": ["drupal", "configuration", "validation", "static-analysis", "yml"]
+        }
+      ]
+    },
+    {
+      "name": "drupal-fields",
+      "description": "Field management and configuration best practices",
+      "source": "./ai/skills/fields",
+      "strict": false,
+      "skills": [
+        {
+          "id": "drupal-fields",
+          "title": "Drupal Fields",
+          "summary": "Field management and configuration best practices",
+          "tags": ["drupal", "fields", "content-modeling"]
+        }
+      ]
+    },
+    {
+      "name": "drupal-forms",
+      "description": "Form API implementation and best practices",
+      "source": "./ai/skills/forms",
+      "strict": false,
+      "skills": [
+        {
+          "id": "drupal-forms",
+          "title": "Drupal Forms",
+          "summary": "Form API implementation and best practices",
+          "tags": ["drupal", "forms", "api"]
+        }
+      ]
+    },
+    {
+      "name": "drupal-nodes",
+      "description": "Node content type management and configuration",
+      "source": "./ai/skills/nodes",
+      "strict": false,
+      "skills": [
+        {
+          "id": "drupal-nodes",
+          "title": "Drupal Nodes",
+          "summary": "Node content type management and configuration",
+          "tags": ["drupal", "nodes", "content-types"]
+        }
+      ]
+    },
+    {
+      "name": "drupal-content-entities",
+      "description": "Custom content entity development and configuration",
+      "source": "./ai/skills/other-content-entities",
+      "strict": false,
+      "skills": [
+        {
+          "id": "drupal-content-entities",
+          "title": "Drupal Content Entities",
+          "summary": "Custom content entity development and configuration",
+          "tags": ["drupal", "entities", "content-entities"]
+        }
+      ]
+    },
+    {
+      "name": "drupal-taxonomy",
+      "description": "Taxonomy vocabulary and term management",
+      "source": "./ai/skills/taxonomy",
+      "strict": false,
+      "skills": [
+        {
+          "id": "drupal-taxonomy",
+          "title": "Drupal Taxonomy",
+          "summary": "Taxonomy vocabulary and term management",
+          "tags": ["drupal", "taxonomy", "classification"]
+        }
+      ]
+    },
+    {
+      "name": "drupal-text-formats-editors",
+      "description": "Text formats and editors configuration and security",
+      "source": "./ai/skills/text-formats-editors",
+      "strict": false,
+      "skills": [
+        {
+          "id": "drupal-text-formats-editors",
+          "title": "Drupal Text Formats and Editors",
+          "summary": "Text formats and editors configuration and security",
+          "tags": ["drupal", "text-formats", "editors", "security"]
+        }
+      ]
+    },
+    {
+      "name": "drupal-theming",
+      "description": "Theme development and frontend best practices",
+      "source": "./ai/skills/theming",
+      "strict": false,
+      "skills": [
+        {
+          "id": "drupal-theming",
+          "title": "Drupal Theming",
+          "summary": "Theme development and frontend best practices",
+          "tags": ["drupal", "theming", "frontend", "twig"]
+        }
+      ]
+    },
+    {
+      "name": "drupal-views",
+      "description": "Views configuration and optimization",
+      "source": "./ai/skills/views",
+      "strict": false,
+      "skills": [
+        {
+          "id": "drupal-views",
+          "title": "Drupal Views",
+          "summary": "Views configuration and optimization",
+          "tags": ["drupal", "views", "data-display"]
+        }
+      ]
+    }
+  ]
+}
