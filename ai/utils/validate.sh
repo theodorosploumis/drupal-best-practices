@@ -28,17 +28,17 @@ print_info() {
 
 print_success() {
     echo -e "${GREEN}[✓]${NC} $1"
-    ((SUCCESSES++))
+    ((SUCCESSES++)) || true
 }
 
 print_warning() {
     echo -e "${YELLOW}[⚠]${NC} $1"
-    ((WARNINGS++))
+    ((WARNINGS++)) || true
 }
 
 print_error() {
     echo -e "${RED}[✗]${NC} $1"
-    ((ERRORS++))
+    ((ERRORS++)) || true
 }
 
 # Validate JSON file
@@ -170,7 +170,7 @@ validate_skill_consistency() {
     local json_skills=($(jq -r '.skills[].path' claude.json 2>/dev/null || echo ""))
 
     # Get actual skill directories
-    local actual_dirs=($(find claude-skills -maxdepth 1 -type d -not -path "claude-skills" | sed 's|claude-skills/||' | sort))
+    local actual_dirs=($(find skills -maxdepth 1 -type d -not -path "skills" | sed 's|skills/||' | sort))
 
     # Check each skill in claude.json exists
     for skill_path in "${json_skills[@]}"; do
@@ -186,7 +186,7 @@ validate_skill_consistency() {
         if [[ -n "$dir" ]]; then
             local found=false
             for skill_path in "${json_skills[@]}"; do
-                if [[ "claude-skills/$dir" == "$skill_path" ]]; then
+                if [[ "skills/$dir" == "$skill_path" ]]; then
                     found=true
                     break
                 fi
@@ -207,7 +207,7 @@ main() {
     print_info "\n1. Checking repository structure..."
     check_file_exists "claude.json" "Claude manifest"
     check_file_exists "README.md" "Repository README"
-    check_dir_exists "claude-skills" "Skills directory"
+    check_dir_exists "skills" "Skills directory"
     check_dir_exists "scripts" "Scripts directory"
     check_dir_exists "rules" "Rules directory"
     check_dir_exists "commands" "Commands directory"
@@ -232,8 +232,8 @@ main() {
 
     # 3. Validate skills
     print_info "\n3. Validating skills..."
-    if [[ -d "claude-skills" ]]; then
-        find claude-skills -maxdepth 2 -name "SKILL.md" -type f | while read -r skill_file; do
+    if [[ -d "skills" ]]; then
+        find skills -maxdepth 2 -name "SKILL.md" -type f | while read -r skill_file; do
             validate_skill_frontmatter "$skill_file"
             validate_skill_structure "$(dirname "$skill_file")"
         done
