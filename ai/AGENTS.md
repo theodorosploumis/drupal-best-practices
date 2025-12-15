@@ -1,9 +1,8 @@
-# AI contribution guide
+# AI Authoring Instructions
 
-These instructions summarize the Drupal 10+ best practices from `README.md` for any AI-assisted changes inside the `ai/` folder.
-
-- Prioritize the guidance from **2. Site building** and **3. Theming, templates**. Avoid any Drupal 7.x-only rules.
-- Use clear machine names and avoid multi-word theme names; keep everything human-readable and concise.
-- Keep recommendations aligned with current Drupal core tooling (composer, drush, ddev) and avoid deprecated workflows.
-- Ensure scripts and prompts reinforce configuration over content, avoid hardcoded UUIDs, and respect configuration sync.
-- Keep the output concise and actionable so it can be applied from CLI tools or code editors.
+- Scope: Applies to all files under `ai/`.
+- Derive guidance from the repository README, prioritizing Drupal 10+ usage; do not reintroduce Drupal 7.x-only rules.
+- Prefer concise, actionable checklists suited for AI-assisted development tools.
+- Keep command examples tool-agnostic when possible; if a Drupal CLI is needed, favor `drush`, `ddev`, or `composer`.
+- When adding scripts, include a short usage section and fail with clear, human-readable messages.
+- Use lowercase, hyphenated file and command names for new helper artifacts.

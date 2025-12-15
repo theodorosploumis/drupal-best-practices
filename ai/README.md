@@ -1,16 +1,15 @@
-# AI Helpers for Drupal Best Practices
+# AI Integration Kit for Drupal Best Practices
 
-This folder provides AI-friendly outputs derived from `README.md` sections **2. Site building** and **3. Theming, templates** for Drupal 10+ projects.
+This `ai/` directory packages guidance from README sections 2 (Site building) and 3 (Theming) for AI coding tools and validation workflows targeting Drupal 10+.
 
-- `AGENTS.md` – scope rules for AI-written assets in this folder.
-- `claude-code-skills.md` – index pointing to per-subsection Claude skills.
-- `claude-skills/` – Claude-ready skills with `SKILL.md`, examples, scripts, and references per subsection.
-- `rules.md` – generic rules for any CLI/editor AI.
-- `commands.md` – slash commands mapping to the relevant README sections.
-- `scripts/*.sh` – drush-based validators for subsections (nodes, blocks, taxonomy, fields, views, text formats, theming).
+Contents:
+- `AGENTS.md` — authoring instructions for expanding AI assets.
+- `skills/` — Claude Code skill cards mapped to README subsections.
+- `rules/` — generic AI rules for any CLI or IDE integration.
+- `commands/` — slash commands to load context-specific best practices.
+- `scripts/` — bash validators that use `drush php:eval` to surface configuration issues per subsection.
 
-Run validators from a bootstrapped Drupal site, e.g.
-
-```bash
-./ai/scripts/validate-nodes.sh
-```
+Usage tips:
+- Run scripts from a Drupal project root where Drush is available.
+- Pair slash commands with task context (e.g., `/drupal-best-practices-views events_page`).
+- Keep new assets tool-agnostic and Drupal 10+ focused.
