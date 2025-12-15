@@ -1,153 +1,62 @@
 {
   "name": "drupal-best-practices",
   "owner": {
-    "name": "Theodoros Ploumis",
-    "email": "theodorosploumis@users.noreply.github.com"
+    "name": "Theodoros Ploumis"
   },
   "metadata": {
-    "description": "Drupal development best practices skills for Claude Code",
+    "description": "Drupal development best practices skills for Claude Code including blocks, config parser, fields, forms, nodes, content entities, taxonomy, text formats, theming, and views",
     "version": "1.0.0"
   },
   "plugins": [
     {
       "name": "drupal-blocks",
-      "description": "Create reusable custom blocks and plugins with disciplined naming and configuration",
       "source": "./ai/skills/blocks",
-      "strict": false,
-      "skills": [
-        {
-          "id": "drupal-blocks",
-          "title": "Drupal Blocks and Block Types",
-          "summary": "Create reusable custom blocks and plugins with disciplined naming and configuration",
-          "tags": ["drupal", "site-building", "blocks"]
-        }
-      ]
+      "description": "Create reusable custom blocks and plugins with disciplined naming and configuration. Provides guidance on block type creation, field planning, view mode reuse, and caching expectations for Drupal blocks."
     },
     {
       "name": "drupal-config-parser",
-      "description": "Parse and validate Drupal configuration YAML files for best practices compliance",
       "source": "./ai/skills/config-parser",
-      "strict": false,
-      "skills": [
-        {
-          "id": "drupal-config-parser",
-          "title": "Drupal Config Parser",
-          "summary": "Parse and validate Drupal configuration YAML files for best practices compliance",
-          "tags": ["drupal", "configuration", "validation", "static-analysis", "yml"]
-        }
-      ]
+      "description": "Parse and validate Drupal configuration YAML files for best practices compliance. Analyzes exported configuration files to check naming conventions, structure compliance, and configuration patterns without requiring a running Drupal instance."
     },
     {
       "name": "drupal-fields",
-      "description": "Field management and configuration best practices",
       "source": "./ai/skills/fields",
-      "strict": false,
-      "skills": [
-        {
-          "id": "drupal-fields",
-          "title": "Drupal Fields",
-          "summary": "Field management and configuration best practices",
-          "tags": ["drupal", "fields", "content-modeling"]
-        }
-      ]
+      "description": "Field management and configuration best practices for Drupal. Provides guidance on field creation, configuration, storage settings, and field usage patterns in Drupal content types and entities."
     },
     {
       "name": "drupal-forms",
-      "description": "Form API implementation and best practices",
       "source": "./ai/skills/forms",
-      "strict": false,
-      "skills": [
-        {
-          "id": "drupal-forms",
-          "title": "Drupal Forms",
-          "summary": "Form API implementation and best practices",
-          "tags": ["drupal", "forms", "api"]
-        }
-      ]
+      "description": "Form API implementation and best practices for Drupal. Covers form creation, validation, submission handling, security considerations, and form theming in Drupal's Form API."
     },
     {
       "name": "drupal-nodes",
-      "description": "Node content type management and configuration",
       "source": "./ai/skills/nodes",
-      "strict": false,
-      "skills": [
-        {
-          "id": "drupal-nodes",
-          "title": "Drupal Nodes",
-          "summary": "Node content type management and configuration",
-          "tags": ["drupal", "nodes", "content-types"]
-        }
-      ]
+      "description": "Node content type management and configuration best practices. Provides guidance on creating content types, managing node fields, view modes, and node-related functionality in Drupal."
     },
     {
       "name": "drupal-content-entities",
-      "description": "Custom content entity development and configuration",
       "source": "./ai/skills/other-content-entities",
-      "strict": false,
-      "skills": [
-        {
-          "id": "drupal-content-entities",
-          "title": "Drupal Content Entities",
-          "summary": "Custom content entity development and configuration",
-          "tags": ["drupal", "entities", "content-entities"]
-        }
-      ]
+      "description": "Custom content entity development and configuration for Drupal. Covers creating custom entity types, defining entity fields, entity storage, and entity display configuration."
     },
     {
       "name": "drupal-taxonomy",
-      "description": "Taxonomy vocabulary and term management",
       "source": "./ai/skills/taxonomy",
-      "strict": false,
-      "skills": [
-        {
-          "id": "drupal-taxonomy",
-          "title": "Drupal Taxonomy",
-          "summary": "Taxonomy vocabulary and term management",
-          "tags": ["drupal", "taxonomy", "classification"]
-        }
-      ]
+      "description": "Taxonomy vocabulary and term management best practices for Drupal. Provides guidance on creating vocabularies, managing taxonomy terms, and implementing taxonomy-based content classification."
     },
     {
       "name": "drupal-text-formats-editors",
-      "description": "Text formats and editors configuration and security",
       "source": "./ai/skills/text-formats-editors",
-      "strict": false,
-      "skills": [
-        {
-          "id": "drupal-text-formats-editors",
-          "title": "Drupal Text Formats and Editors",
-          "summary": "Text formats and editors configuration and security",
-          "tags": ["drupal", "text-formats", "editors", "security"]
-        }
-      ]
+      "description": "Text formats and editors configuration and security for Drupal. Covers creating text formats, configuring editors, managing filter settings, and ensuring text format security."
     },
     {
       "name": "drupal-theming",
-      "description": "Theme development and frontend best practices",
       "source": "./ai/skills/theming",
-      "strict": false,
-      "skills": [
-        {
-          "id": "drupal-theming",
-          "title": "Drupal Theming",
-          "summary": "Theme development and frontend best practices",
-          "tags": ["drupal", "theming", "frontend", "twig"]
-        }
-      ]
+      "description": "Theme development and frontend best practices for Drupal. Provides guidance on creating themes, using Twig templates, theme preprocessing, asset management, and responsive design in Drupal."
     },
     {
       "name": "drupal-views",
-      "description": "Views configuration and optimization",
       "source": "./ai/skills/views",
-      "strict": false,
-      "skills": [
-        {
-          "id": "drupal-views",
-          "title": "Drupal Views",
-          "summary": "Views configuration and optimization",
-          "tags": ["drupal", "views", "data-display"]
-        }
-      ]
+      "description": "Views configuration and optimization for Drupal. Covers creating views, managing displays, optimizing queries, and implementing complex data presentations using Drupal Views module."
     }
   ]
 }
