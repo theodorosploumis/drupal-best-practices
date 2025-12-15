@@ -359,11 +359,16 @@ Add to your Claude Code config file (`~/.claude/config.json`):
 - **`drupal-text-formats-editors`** - Text format configuration
 
 #### Usage Examples in Claude Code
-```
-/skill drupal-nodes "Help me design a content type for articles with revisions"
-/skill drupal-views "Create a view for latest blog posts with pagination"
-/skill drupal-theming "How should I structure my theme for a Drupal 10 site?"
-```
+
+Once installed, the Drupal skills will be automatically available in Claude Code. You can use them by:
+
+1. **Starting a conversation with context about your Drupal project**
+2. **Claude will automatically use the relevant skills based on your requests**
+
+Example prompts:
+- "Help me design a content type for articles with revisions"
+- "Create a view for latest blog posts with pagination"
+- "How should I structure my theme for a Drupal 10 site?"
 
 For detailed information about the AI integration kit, see the [`ai/`](ai/) directory.
 

@@ -171,11 +171,13 @@ The repository includes automated testing that:
    python3 testing/validate.py --verbose  # Detailed output
    ```
 
-4. **Test commands** (if using Claude Code locally):
-   ```
-   /skill drupal-nodes
-   /skill drupal-views "Create a view for blog posts"
-   ```
+4. **Test skills** (if using Claude Code locally):
+
+   Once the skills are installed, you can test them by simply starting a conversation with context about your Drupal project. Claude will automatically use the relevant skills based on your requests.
+
+   Example prompts:
+   - "Help me work with Drupal nodes"
+   - "Create a view for blog posts"
 
 ## Creating a New Release
 
