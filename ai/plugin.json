@@ -2,8 +2,9 @@
   "name": "Drupal Best Practices Skills",
   "description": "Claude Code skills for Drupal 10+ best practices covering site building, theming, and development workflows",
   "version": "1.0.0",
-  "author": "Drupal Best Practices Maintainers",
-  "homepage": "https://github.com/theodorosploumis/drupal-best-practices",
+  "author": {
+    "name": "Theodoros Ploumis"
+  },
   "skills": [
     {
       "id": "drupal-nodes",
