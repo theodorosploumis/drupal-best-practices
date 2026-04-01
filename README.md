@@ -169,6 +169,7 @@
 - If you need to use a CSS framework try to pick up only the required parts of the framework and not the whole framework.
 - Always comment @mixins, @function.
 - Always split large scss files if they contain too many lines. Split them by usage (eg the variables related to color, the variables related to typography etc). For Drupal especially, we can group scss files by entity (eg "block/\*", "node/\*", "taxonomy/\*" etc).
+- Organize the twig files on a custom theme on a folder with the name `original` (just the copied twig templates from base theme or module) and a folder `override` where you have the twig templates you override. A twig with the same name should exist on both the `original` and `override` folder.
 - Useful plugins to use for theme development are [autoprefixer](https://autoprefixer.github.io), [breakpoint-sass](http://breakpoint-sass.com), [ModularScale](https://www.modularscale.com), [browsersync](https://browsersync.io), [sass sourcemaps](http://thesassway.com/intermediate/using-source-maps-with-sass).
 
 ---
