@@ -2,6 +2,10 @@
 
 > This is a short, opinion based, **short list** with common best practices for developing a Drupal (8.x) website.
 
+## Usage
+
+- There is a dedicated AI **SKILL** available on [drupaltools/skills](https://github.com/drupaltools/skills)
+
 ## Preface
 
 - If you need to create a **Report** for a Drupal project please head to https://github.com/theodorosploumis/drupal-report.
