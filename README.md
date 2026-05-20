@@ -209,7 +209,7 @@
 - Settings.php and additional files should work on a CI system and they should be "platform agnostic".
 - Use composer for dependencies and track only composer.json and composer.lock files on git.
 - Try to not track composer downloaded files on git (eg module/contrib, themes/contrib, core, vendor folders etc). Track them only if you have no options to run `composer install` on the online servers.
-- Prefer using a specific version for all packages and especially for Drupal core (eg `"drupal/core": "8.8.10"` instead of `"drupal/core": "^8.8"`)
+- Prefer using a minor version for all packages and especially for Drupal core (eg `"drupal/core": "^10.1"` instead of fixed version `"drupal/core": "10.1.8"`). There is one exception with Drupal distributions like the [Open Social](https://www.drupal.org/project/social) where fixed versions on core and some contrib are usually the only way to deal with the updates.
 - Patches should be added with composer using [cweagans/composer-patches](https://github.com/cweagans/composer-patches).
 - Patches added should be static files (eg from a Drupal.org issue or a local folder). Do not use the Drupal Gitlab Merge Request diff generated from an "Issue fork branch" (see https://www.drupal.org/node/3172805) as a patch because this file is a dynamic one and may change on any new commits. 
 - Keep the `config` folder out of the web files folder but track it on git.
