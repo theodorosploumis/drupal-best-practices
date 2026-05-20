@@ -111,7 +111,7 @@
 - WYSIWYG should provide basic information about using the Editor as also as a more analytic page for Admins.
 - Too many options on the WYSIWYG may cause problems. Protect the user from "breaking" the site design/code etc.
 - If you allow the "image" button for CKEditor you normally need to install an image browser like [imce](https://www.drupal.org/project/imce).
-- Be careful with the CKEditor `inline-images`. Normally you should not allow users to add images on CKEditor but use a specific image field to do so.
+- Do not allow plain images inside the CKEditor. You should not allow users to add images on CKEditor through the media module.
 - If you allow the "link" button for CKEditor you normally need to install additional modules such as [linkit](https://www.drupal.org/project/linkit), [editor_advanced_link](https://www.drupal.org/project/editor_advanced_link), [pathologic](https://www.drupal.org/project/pathologic) etc.
 
 ### 2.9 Menus & navigation
