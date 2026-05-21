@@ -40,12 +40,12 @@
 - Don't create new revisions by default except if the Node pages you create need to have workflow statues and they are really important (eg a simple news page on a 10k News website may not have revisions but the main product landing page could have).
 - Display view modes should be generic for all Content types and not specific (eg event_full).
 - Machine names of Content types and fields should disallow name conflicts (eg nameone and nameoneplus may cause issues).
-- Content types should follow this pattern for the machine name: [machinename]. That means you should use only letters and no special character or space.
+- Content types should follow this pattern for the machine name: [machinename] or [machine_name]. That means you should use only letters (and underscores if needed) and no other special characters or spaces.
 - Avoid very generic machine names or names that have been used already on the site even for another type of functionality (Views, Content types, Blocks, Plugins etc).
 - All Content types should have a Description to inform the user or developer about their need.
 
 ### 2.2 Blocks
-- Custom Blocks should follow this pattern for the machine name: [machinename]. That means you should use only letters and no special character or space.
+- Custom Blocks should follow this pattern for the machine name: [machinename] or [machine_name]. That means you should use only letters (and underscores if needed) and no other special characters or spaces.
 - Create custom Block Types using code.
 - For "static" like Blocks (eg with static html content that have only 1 instance) create Block Plugins through code. Avoid adding Blocks uging fixed "uuids" through a hook_install() or hook_update_N() function. Blocks with uuids are considered content and thus you may have problems with config sync, translations etc. See an example of a simple Block plugin on [ExampleUppercaseBlock.php](https://git.drupalcode.org/project/examples/-/blob/3.x/modules/block_example/src/Plugin/Block/ExampleUppercaseBlock.php)
 - Treat machine_name, fields, view modes etc like any other Content type (see above).
@@ -57,7 +57,7 @@
 - Entity and bundle name should use only singular name (Correct: vocabulary "author". Incorrect: vocabulary "authors").
 - Use taxonomy terms only when you need to show pages of categorized content.
 - Don't use taxonomy terms just to filter content. Instead use list type fields.
-- When the taxonomies need to have authorization, extra fields and different display types investigate using a node type entity reference.
+- When the taxonomies need to have authorization, extra fields and different display types, investigate using a node type entity reference.
 
 ### 2.4 Other content entities
 - For other content entities like paragraphs, comments, media,  etc the rules are the same as for Nodes.
