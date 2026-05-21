@@ -95,8 +95,8 @@
 ### 2.7 Forms
 #### 2.7.1 Admin Forms
 - Strive for consistency in admin forms (e.g. create/edit forms for Nodes) regarding the common field order, descriptions and widgets used, for UX/usability purposes. Examples:
- - Common field `field_publication_date` should be on the same spot/order for all CTs. Do not add it second in News form and last in Publication node form.
- - If `field_keywords` should be an auto-complete, use that widget in all forms consistently.
+    - Common field `field_publication_date` should be on the same spot/order for all CTs. Do not add it second in News form and last in Publication node form.
+    - If `field_keywords` should be an auto-complete, use that widget in all forms consistently.
 - Use a sensible order when structuring forms; Title, important meta (e.g. date, type, image), body, non-important meta, files/references/links.
 - Use form fieldsets for grouping related fields together. E.g. proup Publication info which includes fields date, issn, author.
 - General rule: UX is important even for back-end; pay attention to small details that make a huge difference.
