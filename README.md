@@ -40,12 +40,12 @@
 - Don't create new revisions by default except if the Node pages you create need to have workflow statues and they are really important (eg a simple news page on a 10k News website may not have revisions but the main product landing page could have).
 - Display view modes should be generic for all Content types and not specific (eg event_full).
 - Machine names of Content types and fields should disallow name conflicts (eg nameone and nameoneplus may cause issues).
-- Content types should follow this pattern for the machine name: [machinename]. That means you should use only letters and no special character or space.
+- Content types should follow this pattern for the machine name: [machinename] or [machine_name]. That means you should use only letters (and underscores if needed) and no other special characters or spaces.
 - Avoid very generic machine names or names that have been used already on the site even for another type of functionality (Views, Content types, Blocks, Plugins etc).
 - All Content types should have a Description to inform the user or developer about their need.
 
 ### 2.2 Blocks
-- Custom Blocks should follow this pattern for the machine name: [machinename]. That means you should use only letters and no special character or space.
+- Custom Blocks should follow this pattern for the machine name: [machinename] or [machine_name]. That means you should use only letters (and underscores if needed) and no other special characters or spaces.
 - Create custom Block Types using code.
 - For "static" like Blocks (eg with static html content that have only 1 instance) create Block Plugins through code. Avoid adding Blocks uging fixed "uuids" through a hook_install() or hook_update_N() function. Blocks with uuids are considered content and thus you may have problems with config sync, translations etc. See an example of a simple Block plugin on [ExampleUppercaseBlock.php](https://git.drupalcode.org/project/examples/-/blob/3.x/modules/block_example/src/Plugin/Block/ExampleUppercaseBlock.php)
 - Treat machine_name, fields, view modes etc like any other Content type (see above).
@@ -57,7 +57,7 @@
 - Entity and bundle name should use only singular name (Correct: vocabulary "author". Incorrect: vocabulary "authors").
 - Use taxonomy terms only when you need to show pages of categorized content.
 - Don't use taxonomy terms just to filter content. Instead use list type fields.
-- When the taxonomies need to have authorization, extra fields and different display types investigate using a node type entity reference.
+- When the taxonomies need to have authorization, extra fields and different display types, investigate using a node type entity reference.
 
 ### 2.4 Other content entities
 - For other content entities like paragraphs, comments, media,  etc the rules are the same as for Nodes.
@@ -70,7 +70,7 @@
 - Fields machine name should follow this pattern for the machine name:  `field_[content_type_machine_name]_[short_name]`.
 - Re-use fields (shared fields) only when you need to create a reference using this field or the field does not change at all between the shared entities (eg field created).
 - Reusable fields can have a more generic machine name pattern (eg field_shared_created or field_common_created etc).
-- All fields should have a Description to inform the user or developer about their need.
+- Add meaningful Description/Help text for fields that are not self-explanatory or have special instructions, to facilitate the user (UX) or developer.
 - Image fields file directory should not use the default structure `[date:custom:Y]-[date:custom:m]` but a custom one meaningful name (eg `banners`). Unify image fields of the same type under the same folders.
 - Remove `gif` from allowed file extensions for image fields except if there are special requirements.
 - Consider using a fixed number of letters for the prefixes everywhere eg in a 3 letter prefix pattern there whould be `field_srd_` for shared fields, `field_art_` for Article node type only fields etc.
@@ -81,7 +81,7 @@
 - It is required to give a meaningful (Administrative) name, description and tags to the Views. Do not leave the default values.
 - Create one Views per Views Display except if it is a requirement. For example a Block Views and a Page Views for the same Content type should exist on different Views.
 - Always use `Format > Show: Content` for the views row display and not fields. This way the styling will be tied with the Content types View Modes. If there is no available content type View Mode create one.
-- Do not add custom CSS classes on the whole Views.
+- Consider adding custom CSS classes on the whole Views when absolutely needed (e.g. utility classes). Do not abuse this feature.
 - When packaging with Drupal Features add the Views with the associated Entity type (eg Blog) except if there is a special use case of the Views.
 - Always override default system views if they are to be used on the project.
 - Do not use Ajax by default for a View.
@@ -93,6 +93,14 @@
 - If you clone a View be careful to satisfy the above rules.
 
 ### 2.7 Forms
+#### 2.7.1 Admin Forms
+- Strive for consistency in admin forms (e.g. create/edit forms for Nodes) regarding the common field order, descriptions and widgets used, for UX/usability purposes. Examples:
+    - Common field `field_publication_date` should be on the same spot/order for all CTs. Do not add it second in News form and last in Publication node form.
+    - If `field_keywords` should be an auto-complete, use that widget in all forms consistently.
+- Use a sensible order when structuring forms; Title, important meta (e.g. date, type, image), body, non-important meta, files/references/links.
+- Use form fieldsets for grouping related fields together. E.g. proup Publication info which includes fields date, issn, author.
+- General rule: UX is important even for back-end; pay attention to small details that make a huge difference.
+#### 2.7.2 Public Forms
 - Use [webform](https://www.drupal.org/project/webform) module to create custom forms.
 - Use **core Contact form** only if there are no special requirements (eg one only contact form, no need to keep submissions, few filds only etc).
 
@@ -122,7 +130,7 @@
 - Menus should always be menus. Non menu blocks used as menus have accessibility issues and missing valuable details for the browser (eg the `is-active` class).
 
 ### 2.10 Users, roles & permissions
-- Use an "Administrator" role only when you neednpm install -g lighthouse to add more than 1 Administrators.
+- Use an "Administrator" role only when you need to add more than 1 Administrators.
 - Split roles by Persona (not by functionality).
 - Do not allow authors access pages and options that they have nothing to do (hide empty admin pages).
 - Don't allow multiple real persons to share the same Drupal Account. Consider creating 1 account per person.
