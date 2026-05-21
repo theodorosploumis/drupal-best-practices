@@ -81,7 +81,7 @@
 - It is required to give a meaningful (Administrative) name, description and tags to the Views. Do not leave the default values.
 - Create one Views per Views Display except if it is a requirement. For example a Block Views and a Page Views for the same Content type should exist on different Views.
 - Always use `Format > Show: Content` for the views row display and not fields. This way the styling will be tied with the Content types View Modes. If there is no available content type View Mode create one.
-- Do not add custom CSS classes on the whole Views.
+- Consider adding custom CSS classes on the whole Views when absolutely needed (e.g. utility classes). Do not abuse this feature.
 - When packaging with Drupal Features add the Views with the associated Entity type (eg Blog) except if there is a special use case of the Views.
 - Always override default system views if they are to be used on the project.
 - Do not use Ajax by default for a View.
