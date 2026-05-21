@@ -93,6 +93,14 @@
 - If you clone a View be careful to satisfy the above rules.
 
 ### 2.7 Forms
+#### 2.7.1 Admin Forms
+- Strive for consistency in admin forms (e.g. create/edit forms for Nodes) regarding the common field order, descriptions and widgets used, for UX/usability purposes. Examples:
+ - Common field `field_publication_date` should be on the same spot/order for all CTs. Do not add it second in News form and last in Publication node form.
+ - If `field_keywords` should be an auto-complete, use that widget in all forms consistently.
+- Use a sensible order when structuring forms; Title, important meta (e.g. date, type, image), body, non-important meta, files/references/links.
+- Use form fieldsets for grouping related fields together. E.g. proup Publication info which includes fields date, issn, author.
+- General rule: UX is important even for back-end; pay attention to small details that make a huge difference.
+#### 2.7.2 Public Forms
 - Use [webform](https://www.drupal.org/project/webform) module to create custom forms.
 - Use **core Contact form** only if there are no special requirements (eg one only contact form, no need to keep submissions, few filds only etc).
 
