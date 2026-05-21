@@ -122,7 +122,7 @@
 - Menus should always be menus. Non menu blocks used as menus have accessibility issues and missing valuable details for the browser (eg the `is-active` class).
 
 ### 2.10 Users, roles & permissions
-- Use an "Administrator" role only when you neednpm install -g lighthouse to add more than 1 Administrators.
+- Use an "Administrator" role only when you need to add more than 1 Administrators.
 - Split roles by Persona (not by functionality).
 - Do not allow authors access pages and options that they have nothing to do (hide empty admin pages).
 - Don't allow multiple real persons to share the same Drupal Account. Consider creating 1 account per person.
